@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="de-DE"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>IOS Sicherheitscheckliste | hellozz</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">IOS Sicherheitscheckliste</h1><a id="logo" href="/.">hellozz</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">IOS Sicherheitscheckliste</h1><div class="post-meta">Jan 12, 2018</div><div class="post-content"><ul>
+<li>Projekt</li>
+<li>Bewertung interne Rating-Scanner zu erfassen, ob</li>
+<li>Nachweis</li>
+<li>Gefahren</li>
+<li><p>Bemerkungen</p>
+</li>
+<li><p>unsichere Lagerung</p>
+</li>
+<li>Analyse der spezifischen Forschungs</li>
+<li>Statische Analyse Anwendungslogik sowie das Installationsprogramm auf dem Gerät die Daten und Berechtigungen zu überprüfen, um festzustellen, ob es sinnvoll ist, um die Anwendungs-Sandbox zu verwenden und KeyChain private Daten und Identitätsnachweise schützen.</li>
+<li><p>Ein Angreifer kann bösartige Anwendungen durch Unternehmen Zertifikat, richtige Trick Verwendung der Daten installieren nicht Sandbox Erwerb geschützt werden, weitere Kontrolle der Benutzerkonten und andere Zwecke zu erreichen.</p>
+</li>
+<li><p>Unsichere SSL-Server-Einsatz</p>
+</li>
+<li>Hohe spezifische Analyse ja</li>
+<li>Analyse des Kommunikations-API-Servers überprüft, ob eine verschlüsselte Verbindung zu ermöglichen, ob veraltete Cipher-Suite, Cipher-Suite für bekannte Schwachstellen, ob die Stärke der wichtigsten Anforderungen.</li>
+<li><p>unsichere Server SSL-Verschlüsselung Stärke ist vor allem der Bereitstellung führen wird, oder unter Androhung von bekannten Angriffen, die es einem Angreifer ermöglichen, den Schlüssel zu knacken, um Middle-Angriffe zu erreichen.</p>
+</li>
+<li><p>Falsche Kalibrierzertifikat</p>
+</li>
+<li>hoch in Umfrage</li>
+<li>Statische Analyse-Programm verwendet richtig die SSL-Zertifikat Überprüfung, dass das Domain-Name-Zertifikat Emittent gültig zu überprüfen.</li>
+<li><p>Der Kunde nicht das richtige Zertifikat nicht überprüfen kann Middle-Angriffen führen.</p>
+</li>
+<li><p>Verwendung von Nicht SSL Pinning</p>
+</li>
+<li>High Low Forschung</li>
+<li>Statische Analyse-Programm wird mit SSL Pinning.</li>
+<li>Ein Angreifer Root-Zertifikate auf einer Webseite zur Verfügung stellen könnte zum Herunterladen, Installieren induzieren Opfer Vertrauen, so dass die App auch nach dem richtigen Zertifikat-Verifizierungsprozess Api Angreifer ausnutzen kann, noch Middle-Angriffen vollständig entschlüsselt Verkehr, zu erreichen sein.</li>
+<li><p>Zertifikat auf iOS installiert ist viel einfacher als Android</p>
+</li>
+<li><p>ATS unsichere Konfiguration</p>
+</li>
+<li>Hoch Tief ja</li>
+<li>Statische Analyse-Verfahren, ob die Verwendung von Nicht-SSL-Inhalte geladen zu ermöglichen.</li>
+<li><p>offen NSAllowsArbitraryLoads erlaubt, jeden Inhalt im Klartext übertragen, kann Middle-Angriffe führen, zusätzlich zur Stärkung der App Store Limit diese Option zu Schwierigkeiten Regalen führen kann.</p>
+</li>
+<li><p>Kryptographie Umsetzungsfragen</p>
+</li>
+<li>Analyse der spezifischen Forschungs</li>
+<li>Analyse der statischen und dynamischen Spuranwendungslogik Kombination von Kryptografie Rückwärtskorrelationsfunktionsaufrufe, prüfen auf Fehler implementiert Kryptografie, wie symmetrische Verschlüsselungsschlüssel fest einprogrammiert oder ungenügende Festigkeit des Einweg-Hash-Funktion.</li>
+<li><p>Falsche Verschlüsselungsfunktionen zu erreichen, die Verschlüsselungsstärke zu einer deutlichen Reduktion führen wird, in Kombination mit anderen Problemen weiteren Angriffen Anwendungen.</p>
+</li>
+<li><p>Unsichere Benutzerauthentifizierung</p>
+</li>
+<li>Hohe spezifische Analyse nein</li>
+<li>Statische und dynamische Analyse Tracking Anwendungslogik Kombination, Prozessrückwärtsbenutzerauthentifizierung zu prüfen, ob es ein logisch und Umsetzung Anfälligkeiten ist.</li>
+<li><p>Die Benutzerauthentifizierung kann zu unsicheren Benutzeridentität führen betrügerisch ist, sie die Bibliothek Angriffe getroffen, gefährden Kontosicherheit.</p>
+</li>
+<li><p>Client-SQL Injection</p>
+</li>
+<li>spezifische Analyse Forschung analysieren</li>
+<li>in Übereinstimmung mit der Injektion signifikant sein kann, angesichts der Injektion Blinddetektion Weise durch Zugabe‘,“, +, und, oder, xor usw. geschlossen Symbole bestimmt Zeichen Logik, ob eine Sicherheitslücke SQL Injektion vorhanden ist.</li>
+<li><p>ein Angreifer eine lokale SQL-Injection-Schwachstelle verwenden, um den Zugriff auf sensible Informationen in der Datenbank führen könnte, weitere Steuerbenutzerkonten und andere Zwecke zu erreichen.</p>
+</li>
+<li><p>IP-Netzwerk Leck</p>
+</li>
+<li>Low Low ja</li>
+<li>Statische Analyse Code der Anwendung enthält eine hartcodierte Server private Adresse.</li>
+<li><p>Ein Angreifer kann die in Verbindung mit anderen Server-Anwendungen wie Intranet gestartet SSRF Arten von Angriffen erhielt Adresse verwenden.</p>
+</li>
+<li><p>Client-Pfadüberquerung</p>
+</li>
+<li>Hohe spezifische Analyse Forschung</li>
+<li>Statische Analyse der Anwendungslogik und dynamische Tracking-Programmausführung.</li>
+<li><p>Ein Angreifer kann die privaten Daten-Anwendungen greifen auf die Path Traversal Probleme verwenden.</p>
+</li>
+<li><p>Adresse Randomisierung ist nicht aktiviert</p>
+</li>
+<li>Hoch Tief ja</li>
+<li>Statische Analyse-Anwendung ausführbare Datei, überprüfen Sie, dass PIE Schutz aktiviert.</li>
+<li><p>Anwendung ungeöffnet PIE wird die Schwierigkeit der Verwendung der Speicherbeschädigung Klasse reduzieren.</p>
+</li>
+<li><p>Stack Cookies nicht aktiviert</p>
+</li>
+<li>Hoch Tief ja</li>
+<li>Statische Analyse-Anwendung ausführbare Dateien, die Flagge überprüfen sind Stapel Kanarischen Schutz aktiviert.</li>
+<li><p>ungeöffnet Stapel Kanarischen Anwendungen werden anfälliger für eine Stapelüberlauf-Schwachstellen.</p>
+</li>
+<li><p>ARC ist nicht aktiviert</p>
+</li>
+<li>Hoch Tief ja</li>
+<li>Statische Analyse-Anwendung ausführbare Datei prüfen, ob die automatische Referenz verwaltete Objekte Zählen aktiviert ist.</li>
+<li><p>ARC ist ein Mechanismus, Objective-C Objekte in der Speicherverwaltung, nach dem Öffnen manuelle Speicherverwaltung Probleme Objektverweis reduzieren führen.</p>
+</li>
+<li><p>URL-Schema Missbrauch</p>
+</li>
+<li>spezifische Analyse nicht analysieren</li>
+<li>Statische Analyse URL-Schema Behandlungsprozess und Bewegungsunschärfe Test, um zu bestimmen, ob ein Programmablauf angegriffen werden kann, wenn URL-Schema zu verarbeiten.</li>
+<li><p>Ein Angreifer kann das Internet nutzen, usw. Anwendung hervorrufen, führen spezifische Prozesse die Verwundbarkeit auslösen.</p>
+</li>
+<li><p>Code von Drittanbietern Probleme</p>
+</li>
+<li>spezifische Analyse Forschung analysieren</li>
+<li>Nachweis SDK und Fremdanbieter-Programm verweist auf seine Version, überprüfen Sie für bekannte Sicherheitslücken, Backdoor oder sogar schädlichen Code (wie XCodeGhost).</li>
+<li>Drittanbieter-Code-Programm eingeführt von SDK und anderen Wegen, wie solche, die Backdoors, Bugs, etc., wird direkt die Sicherheit der Anwendung selbst betreffen, und schwer zu reparieren selbst.</li>
+<li><p>Basierend auf fremden Code cocoapods-Test?</p>
+</li>
+<li><p>empfindliche Inhaltsausgabe in das Protokoll</p>
+</li>
+<li>Geringe spezifische Analyse Forschung</li>
+<li>Verwendung von statischen und dynamischen Analyse kombinierten Betrieb, prüft die Anwendung, ob die sensiblen Informationen Ausgang mit dem Protokoll.</li>
+<li><p>Ein Angreifer könnte die Systemprotokolle über Anwendungen den Zugriff auf Informationen lesen. Haken sehr einfach zu implementieren, ist die Frage, wie die Informationen empfindlich zu beurteilen?</p>
+</li>
+<li><p>Keylogging Schutz ist nicht aktiviert</p>
+</li>
+<li>Niedrige Forschung</li>
+<li>Statische Analyse-Anwendung ausführbare Dateien, kombiniert mit dynamischen Tracking, Anforderungen Sicherheit abhängig von der Anwendung, um zu bestimmen, ob Sie Eingabesteuerungen für bestimmte benutzerdefinierten Soft-Tastatur hinzufügen müssen.</li>
+<li>Tastatur-System führen können Anwendungen von Drittanbietern die Tastaturpuffer einen Benutzernamen erhalten zu lesen, oder Screen-Recording-Intercept-Benutzereingabe verwenden.</li>
+<li><p>Basierend Haken?</p>
+</li>
+<li><p>die Anwendung ist nicht empfindlicher Nachweis zu entkommen</p>
+</li>
+<li>Low Low Forschung</li>
+<li>Statische Analyse Anwendungslogik entzieht reale Einbaugeräte, zu bestimmen, ob die Anwendungsumgebung zu entkommen Erkennung nach ihren Bedürfnissen und die Benutzer über mögliche Risiken zu informieren.</li>
+<li>wird die Angriffsfläche App das Gerät jailbreaken kann die Malware verwendet nicht-öffentliche API, Haken und andere technische Anwendungen erheblich erhöht die Sandbox zu umgehen, die Benutzer-Token erhalten, Anmeldedaten und andere sensible Informationen.</li>
+<li><p>statische Abfragen, ob Symbole enthalten, spezielle Zeichenfolge</p>
+</li>
+<li><p>Unzulässige Zugriffskontrolle</p>
+</li>
+<li>Geringe spezifische Analyse ja</li>
+<li>Statische Analyse-Anwendung ausführbare Dateien, kombiniert mit dynamischen Tracking-und Analyse-Anwendung Zugriffssteuerungsmodell erfüllen die Sicherheitsanforderungen.</li>
+<li><p>Falsche Benutzerzugriffskontrollpolitik zu sensiblen Informationen sind durchgesickert führen kann.</p>
+</li>
+<li><p>Logische Defekte</p>
+</li>
+<li>spezifische Analyse nicht analysieren</li>
+<li>Statische Analyse-Anwendung ausführbare Dateien, kombiniert mit dynamischen Tracking-und Analyse-Anwendung können über das Vorhandensein oder Fehlen eines logischen Fehlers angegriffen werden.</li>
+<li><p>Logikfehler wird die Anwendung dazu führen, dass nicht-Design erwartetes Verhalten erscheinen.</p>
+</li>
+<li><p>nicht schützen Screenshot</p>
+</li>
+<li><p>Low Low nein<br>Überprüfen Sie, ob die Anwendung in den Hintergrund einen Screenshot speichern -. Wenn das Programm in den Hintergrund der Screenshots, die vertrauliche Informationen enthalten, die zum Verlust der Privatsphäre führen kann.</p>
+</li>
+<li><p>sensible Daten in Klartext übertragen</p>
+</li>
+<li>hoch in nicht</li>
+<li>Prüfen, ob die sensiblen Informationen verschlüsseln Paketdatenkommunikation mit der Server-Anwendung.</li>
+<li><p>Wenn Benutzer die-Middle-Angriff leiden, wenn sensible Informationen im Klartext übertragen wird, wird auf die Offenlegung von Informationen führen.</p>
+</li>
+<li><p>sensible Daten erlauben die Verwendung der Zwischenablage</p>
+</li>
+<li>niedrig nein<br>Überprüfen Sie, ob die Anwendung von sensiblen Daten kopiert werden können -.</li>
+<li><p>iOS System-Zwischenablage kann jede Anwendung zugegriffen werden, so dass der Benutzer vertrauliche Daten kopieren, wenn die Gefahr von Informationslecks ist.</p>
+</li>
+<li><p>Fehlerseiten Offenlegung von sensiblen Informationen</p>
+</li>
+<li>Geringe keine spezifische Analyse</li>
+<li>die Anwendung einer Ausnahmestatus der Prüfung, Fehlermeldungen enthalten sensible Daten.</li>
+<li>unnötige Ausgabe Fehlerseite kann zur Offenlegung von Informationen führen oder zusätzliche Informationen für die Angreifer bieten.</li>
+</ul>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2018/03/10/APP Sicherheitstest/">APP Sicherheitstest</a><a class="next" href="/2017/11/06/Sicherheitsschulung/">Sicherheitsschulung</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/09/Android-Sicherheits-Checkliste/">Android-Sicherheits-Checkliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/2018BlackHat Werkzeug/">2018BlackHat Werkzeug</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/2018 Sicherheitsbewusstsein TOP-10/">2018 Sicherheitsbewusstsein TOP-10</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/API-Sicherheitsentwicklungscheckliste/">API-Sicherheitsentwicklungscheckliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/10/APP Sicherheitstest/">APP Sicherheitstest</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/12/IOS Sicherheitscheckliste/">IOS Sicherheitscheckliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Sicherheitsschulung/">Sicherheitsschulung</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/Sicherheitsdesign Checkliste/">Sicherheitsdesign Checkliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/Über 20 Jahre Java-Sandbox-Flucht/">Über 20 Jahre Java-Sandbox-Flucht</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/Trading System Häufig gestellte Fragen und Lösungen Übersicht/">Trading System Häufig gestellte Fragen und Lösungen Übersicht</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">hellozz.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

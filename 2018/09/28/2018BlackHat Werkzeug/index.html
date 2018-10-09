@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="de-DE"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>2018BlackHat Werkzeug | hellozz</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">2018BlackHat Werkzeug</h1><a id="logo" href="/.">hellozz</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">2018BlackHat Werkzeug</h1><div class="post-meta">Sep 28, 2018</div><div class="post-content"><h3 id="1-Android-iOS-und-mobile-Hacker"><a href="#1-Android-iOS-und-mobile-Hacker" class="headerlink" title="1.Android, iOS und mobile Hacker"></a>1.Android, iOS und mobile Hacker</h3><ul>
+<li>Anfällige iOS-App: Swift-Version<br>Die vulnerable IOS-Anwendung (DVIA) wurde entwickelt, um Studenten, mobilen Sicherheitsexperten und Fachleuten eine Plattform zu bieten, auf der sie ihre IOS-Penetrationstests üben können. Das Programm weist derzeit folgende Sicherheitslücken auf:<ul>
+<li><ol>
+<li>Lokaler Datenspeicher</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Jailbreak-Erkennung</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Übermäßige Autorisierung</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>Betrieb ausführen</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Anti-Haken / Debugging</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>Binärer Schutz</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>Fingerabdruck / Gesichtserkennung Bypass</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>Angeln</li>
+</ol>
+</li>
+<li><ol start="9">
+<li>Datenlecks umgehen</li>
+</ol>
+</li>
+<li><ol start="10">
+<li>IPC Frage</li>
+</ol>
+</li>
+<li><ol start="11">
+<li>Verschlüsselung und unterbrochener Ring</li>
+</ol>
+</li>
+<li>Problem 12.Webview</li>
+<li><ol start="13">
+<li>Sicherheit der Netzwerkebene</li>
+</ol>
+</li>
+<li><ol start="14">
+<li>Anwendung patchen</li>
+</ol>
+</li>
+<li><ol start="15">
+<li>Sensible Informationen im Speicher</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/prateek147/DVIA-v2" target="_blank" rel="noopener">https://github.com/prateek147/DVIA-v2</a></p>
+<h3 id="2-Code-Auswertung"><a href="#2-Code-Auswertung" class="headerlink" title="2. Code-Auswertung"></a>2. Code-Auswertung</h3><ul>
+<li>OWASP-Abhängigkeitsprüfung<br>Dependency-Check ist ein Software Composition Analysis (SCA) -Tool, mit dem öffentlich gemeldete Sicherheitslücken in Projektabhängigkeiten erkannt werden. Dazu ermittelt es, ob eine bestimmte Abhängigkeit eine CPE-Kennung (Common Platform Enumeration) aufweist. Wenn dies gefunden wird, wird ein Bericht generiert, der auf den relevanten CVE-Eintrag verweist.</li>
+</ul>
+<p><a href="https://github.com/jeremylong/DependencyCheck" target="_blank" rel="noopener">https://github.com/jeremylong/DependencyCheck</a></p>
+<ul>
+<li>Cougar-Scan<br>Puma Scan ist ein .NET-Software-Sicherheitscode-Analysetool, das eine kontinuierliche Quellcodeanalyse in Echtzeit bietet, während das Entwicklungsteam Code schreibt. In Visual Studio werden Sicherheitslücken in der Entwicklungsumgebung sofort als Rechtschreibprüfung und Compiler-Warnungen angezeigt, um zu verhindern, dass Sicherheitsverletzungen in Ihre Anwendung gelangen. Puma Scan ist ebenfalls in den Build integriert, um eine Sicherheitsanalyse zur Kompilierungszeit zu ermöglichen.</li>
+</ul>
+<p><a href="https://github.com/pumasecurity/puma-scan" target="_blank" rel="noopener">https://github.com/pumasecurity/puma-scan</a></p>
+<h3 id="3-Verschlusselung"><a href="#3-Verschlusselung" class="headerlink" title="3. Verschlüsselung"></a>3. Verschlüsselung</h3><ul>
+<li>DeepViolet: SSL / TLS-Scanning-API und -Tools<br>DeepViolet ist eine in Java geschriebene TLS / SSL-Scanning-API. Das Tool unterstützt Befehlszeile und grafische Oberfläche auf zwei Arten verwendet werden, können diese beiden Methoden verwendet werden HTTPS-Web-Server scannen für Zertifikatvertrauenskette, Sperrstatus zu überprüfen, bis Prüfzertifikat abgelaufen ist, das einen schwachen Signaturalgorithmus und so weiter.</li>
+</ul>
+<p><a href="https://github.com/spoofzu/DeepViolet" target="_blank" rel="noopener">https://github.com/spoofzu/DeepViolet</a></p>
+<h3 id="4-Datenforensik-und-Vorfallreaktion"><a href="#4-Datenforensik-und-Vorfallreaktion" class="headerlink" title="4. Datenforensik und Vorfallreaktion"></a>4. Datenforensik und Vorfallreaktion</h3><ul>
+<li>Anfänger zum Experten<br>Bro ist ein passiver Open Source Netzwerk Traffic Analyzer. Es ist in erster Linie ein Sicherheitsmonitor, der den gesamten Verkehr auf dem Link überprüft, um Anzeichen für verdächtige Aktivitäten zu erkennen. Im Allgemeinen unterstützt Bro jedoch eine Vielzahl von Aufgaben zur Verkehrsanalyse, auch außerhalb der Sicherheitsdomäne, einschließlich Leistungsmessungen und zur Lösung von Problemen.</li>
+</ul>
+<p><a href="https://github.com/bro/bro" target="_blank" rel="noopener">https://github.com/bro/bro</a></p>
+<ul>
+<li>CyBot: Open Source Bedrohung Intelligenz Chatbot<br>CyBot ist ein Open-Source-Bedrohungsinformations-Chat-Bot. Benutzer können einfache Fragen an CyBot stellen und sogar Ergebnisse mit anderen teilen, anstatt zu verschiedenen Websites oder Dashboards zu gehen.Diese Fähigkeit ist jetzt frei und wird aktiv entwickelt.</li>
+</ul>
+<p><a href="https://github.com/CylanceSPEAR/CyBot" target="_blank" rel="noopener">https://github.com/CylanceSPEAR/CyBot</a></p>
+<ul>
+<li>LogonTracer<br>LogonTracer ist ein Analysetool zur Analyse von Window Active Directory-Ereignisprotokollen zur Untersuchung bösartiger Logins. LogonTracer verknüpft den Hostnamen (oder die IP-Adresse) im loginbezogenen Ereignis mit dem Kontonamen und zeigt ihn als Diagramm an. Auf diese Weise können Sie sehen, bei welchem ​​Konto der Anmeldeversuch stattgefunden hat und welcher Host verwendet wurde.</li>
+</ul>
+<p>[<a href="https://github.com/JPCERTCC/LogonTracer]" target="_blank" rel="noopener">https://github.com/JPCERTCC/LogonTracer]</a> (<a href="https://github.com/JPCERTCC/LogonTracer" target="_blank" rel="noopener">https://github.com/JPCERTCC/LogonTracer</a>)</p>
+<ul>
+<li>Rastrea2r (nachladen!): Sammle und jage IOC mit Gusto und Style<br>rastrea2r ist ein Multi-Plattform-Open-Source-Tool, die einfallenden Responder und SOC Analysten suspekt System für Kompromiss Index (IOC) auf Tausende von Endpunkten in Minuten zu klassifizieren und durchsuchen. Wenn Sie ein Remote-System (einschließlich Speicherabbild) sowie die erhaltenen Zinsen analytische Arbeit, rastrea2r über mehrere Endpunkte Ausführung Sysinternal, Systembefehle und andere Tools von Drittanbietern (einschließlich der benutzerdefinierten Skript), die Ausgabe des Ergebnismenge leicht automatisch gespeichert Oder manuell analysieren. RAStrea2r kann mithilfe der RESTful-API für Client / Server auch die YARA-Regel verwenden, um auf mehreren Systemen nach Platten- und In-Memory-IOC zu suchen.</li>
+</ul>
+<p><a href="https://github.com/rastrea2r/rastrea2r" target="_blank" rel="noopener">https://github.com/rastrea2r/rastrea2r</a></p>
+<ul>
+<li>RedHunt OS (VM): Virtuelle Maschine für die Nachahmer-Emulation und die Bedrohungssuche<br>RedHunt zielt darauf ab, sich aktiv Bedrohungen in Ihrer Umgebung zu identifizieren, indem sie den Angreifer zu integrieren und die Verteidiger der Arsenal-Kits, damit ein One-Stop-Shop für alle Ihre Bedrohungen und Gefahren simuliert Suchanforderungen werden.</li>
+</ul>
+<p>[<a href="https://github.com/redhuntlabs/RedHunt-OS]" target="_blank" rel="noopener">https://github.com/redhuntlabs/RedHunt-OS]</a> (<a href="https://github.com/redhuntlabs/RedHunt-OS" target="_blank" rel="noopener">https://github.com/redhuntlabs/RedHunt-OS</a>)</p>
+<h3 id="5-Gegenwerkzeug"><a href="#5-Gegenwerkzeug" class="headerlink" title="5. Gegenwerkzeug"></a>5. Gegenwerkzeug</h3><ul>
+<li>AVET: Antiviren-Ausweichen-Tool<br>AVET ist ein AntiVirus Evasion-Tool, das es den Testern erleichtert, Virendateien und zielgerichtetere Antivirenlösungen zu strukturieren.</li>
+</ul>
+<p><a href="https://github.com/govolution/avet" target="_blank" rel="noopener">https://github.com/govolution/avet</a></p>
+<ul>
+<li>DSP: Docker Sicherheitsspielplatz<br>Die Hauptfunktionen des Docker Security Playground sind wie folgt:<ul>
+<li><ol>
+<li>Erstellen Sie eine Netzwerk- und Netzwerksicherheitslösung, um alle Netzwerkprotokolle, Regeln und Sicherheitsprobleme zu verstehen</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Lern-Penetrationstest-Technologie</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Flexibilere Verwaltung des Docker-Compose-Projekts</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/giper45/DockerSecurityPlayground" target="_blank" rel="noopener">Https://github.com/giper45/DockerSecurityPlayground</a></p>
+<ul>
+<li>hideNsneak: Angriffs-Verwirrungs-Rahmenwerk<br>hideNsneak hilft dabei, die Penetrations-Infrastruktur von Penetration-Testern zu verwalten, indem es eine Schnittstelle für die schnelle Bereitstellung, Verwaltung und Entfernung verschiedener Cloud-Services bereitstellt. Beinhaltet virtuelle Maschinen, Domain-Frontends, Cobalt Strike-Server, API-Gateways und Firewalls.</li>
+</ul>
+<p><a href="https://github.com/rmikehodges/hideNsneak" target="_blank" rel="noopener">Https://github.com/rmikehodges/hideNsneak</a></p>
+<ul>
+<li>Merlin<br>Merlin ist ein Post-Use-Tool, das leicht kompiliert werden kann, um Befehle auf jeder Plattform zur Steuerung des Hosts auszuführen.</li>
+</ul>
+<p><a href="https://github.com/Ne0nd0g/merlin" target="_blank" rel="noopener">https://github.com/Ne0nd0g/merlin</a></p>
+<ul>
+<li>RouterSploit<br>Das RouterSploit Framework ist ein Open-Source-Entwicklungsframework für Embedded-Geräte. Es verfügt über folgende Penetrations-Test-Module:<ul>
+<li><ol>
+<li>Exploits - Module, die identifizierte Schwachstellen ausnutzen</li>
+</ol>
+</li>
+<li>2.creds - Modul zum Testen der Anmeldedaten des Netzwerkdienstes</li>
+<li><ol start="3">
+<li>Scanner - Module, die prüfen, ob das Ziel angreifbar ist</li>
+</ol>
+</li>
+<li>4.payloads - Module, die für die Erzeugung von Nutzlasten für verschiedene Architekturen und Einspeisepunkte verantwortlich sind</li>
+<li>5.generisch - Modul, das generische Angriffe durchführt</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/threat9/routersploit" target="_blank" rel="noopener">https://github.com/threat9/routersploit</a></p>
+<h3 id="6-Hardware-Eingebettet"><a href="#6-Hardware-Eingebettet" class="headerlink" title="6. Hardware / Eingebettet"></a>6. Hardware / Eingebettet</h3><ul>
+<li>ChipWhisperer<br>ChipWhisperer ist eine Open-Source-Werkzeugkette, die sich der Hardware-Sicherheitsforschung widmet. Die Toolchain besteht aus mehreren Schichten von Open-Source-Komponenten:<ul>
+<li><ol>
+<li>Hardware: ChipWhisperer verwendet ein Capture Board und ein Target Board. Das Schaltplan- und PCB-Layout des ChipWhisperer-Lite Capture Boards und vieler Target Boards wird kostenlos zur Verfügung gestellt.</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Firmware: Auf der ChipWhisperer-Hardware werden drei separate Firmwares verwendet. Das Capture Board verfügt über einen USB-Controller (in C), einen FPGA für High-Speed-Capture (in Verilog) und Open-Source-Firmware. Zusätzlich verfügt das Zielgerät über eine eigene Firmware, die viele Firmware-Beispiele für verschiedene Ziele enthält.</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Software: Die Software ChipWhisperer besteht aus einem Capture-Programm zur Steuerung der Hardware und einem Analyseprogramm zur Verarbeitung der erfassten Daten.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/newaetech/chipwhisperer" target="_blank" rel="noopener">https://github.com/newaetech/chipwhisperer</a></p>
+<ul>
+<li>JTAGulator: Entdecken Sie die Achillesferse der Hardware-Sicherheit<br>JTAGulator ist ein Open-Source-Hardware-Tool, mit dem OCD-Verbindungen zu Testpunkten, Vias oder Komponenten-Pads auf Zielgeräten identifiziert werden können.</li>
+</ul>
+<p><a href="https://github.com/grandideastudio/jtagulator" target="_blank" rel="noopener">https://github.com/grandideastudio/jtagulator</a></p>
+<ul>
+<li>Micro-Renovator: Bringen Sie die Prozessor-Firmware in den Code ein<br>MicroRenovator bietet einen Mechanismus zum Bereitstellen von Prozessormikrocode unabhängig von den vom Hersteller und vom Betriebssystem bereitgestellten Aktualisierungen, indem ein benutzerdefiniertes EFI-Startskript hinzugefügt wird, das den Mikrocode vor dem Ausführen des Betriebssystems lädt. Dadurch wird die Ghost-Schwachstelle behoben, indem der Betriebssystemkernel in die Lage versetzt wird, den aktualisierten Mikrocode zu erkennen und zu aktivieren.</li>
+</ul>
+<p><a href="https://github.com/syncsrc/MicroRenovator" target="_blank" rel="noopener">https://github.com/syncsrc/MicroRenovator</a></p>
+<ul>
+<li>TumbleRF: RF Blur wird einfach<br>TumbleRF ist ein fuzzing Framework zum Erstellen von Anwendungen für RF-Fuzz-Tests. TumbleRF zielt darauf ab, RF-Fuzzing zu implementieren, indem APIs bereitgestellt werden, um diese Technologien über Protokolle, Funkgeräte und Treiber hinweg zu vereinheitlichen.</li>
+</ul>
+<p><a href="https://github.com/riverloopsec/tumblerf" target="_blank" rel="noopener">https://github.com/riverloopsec/tumblerf</a></p>
+<ul>
+<li>Walross: Machen Sie das Beste aus Ihrem Karten-Klongerät<br>Walrus ist eine Android-App für kontaktlose Kartenklongeräte wie Proxmark3 und Chameleon Mini. Über eine einfache Google Pay-Style-Oberfläche können Sie Zugangskontrollkarten in Ihre Brieftasche lesen, um sie später zu schreiben oder zu simulieren.<br>Während der Teilnahme an Red Team wurde Walrus für Evaluatoren der physischen Sicherheit konzipiert und unterstützt grundlegende Aufgaben wie das Lesen, Schreiben und Emulieren von Karten sowie gerätespezifische Funktionen wie Antennenabstimmung und Gerätekonfiguration. Fortgeschrittene Funktionen wie die Standortmarkierung erleichtern die Handhabung mehrerer Ziele, während beim Stapeln mehrere Karten erfasst werden können, wenn man sich einem Ziel nähert.</li>
+</ul>
+<p>[<a href="https://github.com/TeamWalrus/Walrus]" target="_blank" rel="noopener">https://github.com/TeamWalrus/Walrus]</a> (<a href="https://github.com/TeamWalrus/Walrus" target="_blank" rel="noopener">https://github.com/TeamWalrus/Walrus</a>)</p>
+<h3 id="7-Internet-der-Dinge"><a href="#7-Internet-der-Dinge" class="headerlink" title="7. Internet der Dinge"></a>7. Internet der Dinge</h3><ul>
+<li>Scalable Dynamic Analysis Framework für IoT-Geräte<br>DECAF ist eine binäre Analyseplattform basierend auf QEMU. Dies ist auch die Grundlage der dynamischen Android-Malware-Analyseplattform von DroidScope. Unterstützung: Instant-Virtual-Machine-interne Prüfung, genaue und zerstörungsfreie Kernel-Verschmutzung, ereignisgesteuerte Programmierschnittstelle, dynamische Geräteverwaltung und andere Funktionen.</li>
+</ul>
+<p><a href="https://github.com/sycurelab/DECAF" target="_blank" rel="noopener">https://github.com/sycurelab/DECAF</a></p>
+<ul>
+<li>BLE CTF-Projekt<br>BLE CTF kann Benutzern helfen, die Kernkonzepte der Bluetooth Low-Power Client- und Serverinteraktion zu erlernen, um zu lernen, wie man über Bluetooth eindringt.</li>
+</ul>
+<p><a href="https://github.com/hackgnar/ble_ctf" target="_blank" rel="noopener">https://github.com/hackgnar/ble_ctf</a></p>
+<ul>
+<li>WHID Spritze und WHID Elite: HID Aggressive Gerät der nächsten Generation<br>Der WHID-Injektor ermöglicht das Eingeben von Informationen über Wi-Fi an den Zielcomputer. Das Ziel erkennt Ducky als eine Standard-HID-Tastatur und einen seriellen Anschluss, so dass interaktive Befehle und Skripts auf dem Ziel remote ausgeführt werden können.</li>
+</ul>
+<p><a href="https://github.com/whid-injector/WHID" target="_blank" rel="noopener">https://github.com/whid-injector/WHID</a></p>
+<h3 id="8-Malware-Abwehr"><a href="#8-Malware-Abwehr" class="headerlink" title="8. Malware-Abwehr"></a>8. Malware-Abwehr</h3><ul>
+<li>Bietet eine fortschrittliche Deep-Learning-Analyseplattform für jeden Sicherheitsforscher<br>Dies ist eine Web-Plattform, um Sicherheitsforschung maschinelles Lernen als Dienstleistung (MLaaS) zu demonstrieren. Es verfügt über eine Machine Learning (ML) -Pipeline, um das Modell zu erstellen und abzustimmen. Es hat auch ein Portal, das konfrontative ML und Gegenmaßnahmen zeigt.</li>
+</ul>
+<p><a href="https://github.com/intel/Resilient-ML-Research-Platform" target="_blank" rel="noopener">https://github.com/intel/Resilient-ML-Research-Platform</a></p>
+<ul>
+<li>EKTotal<br>EKTotal ist ein integriertes Analysetool, das den Datenverkehr von Drive-by-Download-Angriffen automatisch analysiert. Es erkennt vier Arten von Exploit-Kits, wie RIG und Magnitude, und mehr als ein Dutzend Arten von Angriffen wie Seamless und Fobos. EKTotal extrahiert auch Exploit-Code und Malware.</li>
+</ul>
+<p><a href="https://github.com/nao-sec/ektotal" target="_blank" rel="noopener">https://github.com/nao-sec/ektotal</a></p>
+<ul>
+<li>Firmware-Audit: Plattform-Firmware-Sicherheitsautomatisierung für Blue Teams und DFIR<br>Firmware Audit (fwaudit) ist ein Plattform-Firmware-Test-Dienstprogramm. Es führt Tests durch und sammelt Diagnose- und Sicherheitsinformationen über Systemfirmware, Datum und Hash-Ausgabe für Forensik und Vorfallreaktion.</li>
+</ul>
+<p>[<a href="https://github.com/PreOS-Security/fwaudit]" target="_blank" rel="noopener">https://github.com/PreOS-Security/fwaudit]</a> (<a href="https://github.com/PreOS-Security/fwaudit" target="_blank" rel="noopener">https://github.com/PreOS-Security/fwaudit</a>)</p>
+<ul>
+<li>MaliceIO<br>Kostenlose Open-Source-Version von VirusTotal</li>
+</ul>
+<p><a href="https://github.com/maliceio/malice" target="_blank" rel="noopener">https://github.com/maliceio/malice</a></p>
+<ul>
+<li>Ziel - siehe MacOS Security Tools<br>Objective-See wurde entwickelt, um dauerhaft kostenlose und einfache und effektive OS X-Sicherheitstools bereitzustellen.</li>
+</ul>
+<p><a href="https://github.com/objective-see" target="_blank" rel="noopener">https://github.com/objective-see</a></p>
+<h3 id="9-Malware-Angriff"><a href="#9-Malware-Angriff" class="headerlink" title="9. Malware-Angriff"></a>9. Malware-Angriff</h3><ul>
+<li>Bluthund 1.5<br>BloodHound ist eine einseitige Javascript-Webanwendung, die auf Linkurious basiert und mit Electron kompiliert wird.Eine der Neo4j-Datenbanken wird vom PowerShell Ingestor bereitgestellt.<br>BloodHound verwendet die Graphentheorie, um versteckte und oft unbeabsichtigte Beziehungen in einer Active Directory-Umgebung aufzudecken. Angreifer können mithilfe von BloodHound sehr komplexe Angriffswege erkennen. Verteidiger können BloodHound verwenden, um dieselben Angriffswege zu identifizieren und zu eliminieren. Sowohl die Blue- als auch die Red-Teams können BloodHound verwenden, um die Berechtigungen in der Active Directory-Umgebung zu verstehen.</li>
+</ul>
+<p><a href="https://github.com/BloodHoundAD/BloodHound" target="_blank" rel="noopener">https://github.com/BloodHoundAD/BloodHound</a></p>
+<h3 id="10-Cyberangriff"><a href="#10-Cyberangriff" class="headerlink" title="10. Cyberangriff"></a>10. Cyberangriff</h3><ul>
+<li>Waffenkammer<br>Armory ist ein Werkzeug, um viele externe und Discovery-Daten von vielen Tools zu erhalten, sie zu einer Datenbank hinzuzufügen und alle relevanten Informationen zu korrelieren. Es wurde entwickelt, um Informationen aus einer Vielzahl von Tools für die Verwendung mit anderen Tools zu erhalten.</li>
+</ul>
+<p><a href="https://github.com/depthsecurity/armory" target="_blank" rel="noopener">https://github.com/depthsecurity/armory</a></p>
+<ul>
+<li>Chiron: Ein erweitertes IPv6-Sicherheitsbewertungs- und Penetrationstestsframework<br>Chiron ist ein in Python geschriebenes IPv6-Framework zur Sicherheitsbewertung, das Scapy verwendet. Es besteht aus folgenden Modulen:<ul>
+<li>1.IPv6 Scanner</li>
+<li><ol start="2">
+<li>IPv6 lokaler Link</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>IPv4 zu IPv6 Proxy</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>IPv6-Angriffsmodul</li>
+</ol>
+</li>
+<li>5.IPv6-Proxy</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/aatlasis/Chiron" target="_blank" rel="noopener">https://github.com/aatlasis/Chiron</a></p>
+<ul>
+<li>DELTA: SDN Security Assessment Framework<br>DELTA ist ein Penetration Testing Framework, das bekannte Angriffsszenarien für verschiedene Testfälle neu generiert. Das Framework bietet außerdem die Möglichkeit, unbekannte Sicherheitsprobleme in SDN mithilfe von Fuzzing-Techniken zu erkennen.</li>
+</ul>
+<p><a href="https://github.com/OpenNetworkingFoundation/DELTA" target="_blank" rel="noopener">https://github.com/OpenNetworkingFoundation/DELTA</a></p>
+<ul>
+<li>Mallet: Agent für jedes Protokoll abfangen<br>Mallet ist ein allgemeineres Werkzeug zum Erstellen von Agenten für jedes Protokoll.</li>
+</ul>
+<p><a href="https://github.com/sensepost/mallet" target="_blank" rel="noopener">https://github.com/sensepost/mallet</a></p>
+<ul>
+<li>PowerUpSQL: PowerShell Toolkit für den Angriff auf SQL Server in einem Unternehmen<br>PowerUpSQL enthält Funktionen, die SQL Server-Erkennung, schwache Konfigurationsüberwachung, Skalierung von Berechtigungen und Ausführung von Betriebssystembefehlen unterstützen. Es ist für interne Penetrationstests und rote Teamtests konzipiert. Administratoren können damit SQL Server in ihrer ADS-Domäne schnell inventarisieren und häufige Threat Search-Aufgaben im Zusammenhang mit SQL Server ausführen.</li>
+</ul>
+<p><a href="https://github.com/NetSPI/PowerUpSQL" target="_blank" rel="noopener">https://github.com/NetSPI/PowerUpSQL</a></p>
+<ul>
+<li>WarBerryPi<br>WarBerryPi wird als Hardwareimplantatgerät im Red Team verwendet. Suchen Sie einfach einen Netzwerkanschluss und verbinden Sie ihn, um innerhalb kürzester Zeit so viele Informationen wie möglich zu erhalten.</li>
+</ul>
+<p><a href="https://github.com/secgroundzero/warberry" target="_blank" rel="noopener">https://github.com/secgroundzero/warberry</a></p>
+<h3 id="11-Netzwerkverteidigung"><a href="#11-Netzwerkverteidigung" class="headerlink" title="11.Netzwerkverteidigung"></a>11.Netzwerkverteidigung</h3><ul>
+<li>ANWI (New Wireless IDS): $ 5 WIDS<br>ANWI ist ein neues Wireless Intrusion Detection System, das auf einem kostengünstigen Wi-Fi-Modul (ESP8266) basiert, das im physischen Umkreis des Versorgungsbereichs eingesetzt werden kann. Es ermöglicht Organisationen, die sich keine teuren WIDS-Lösungen leisten können, ihre Netzwerke kostengünstig zu schützen.</li>
+</ul>
+<p><a href="https://github.com/SanketKarpe/anwi" target="_blank" rel="noopener">https://github.com/SanketKarpe/anwi</a></p>
+<ul>
+<li>CHIRON: Home-based Netzwerkanalyse und Machine Learning Threat Detection Framework<br>CHIRON ist ein Netzwerksicherheitsanalysetool basierend auf ELK Stack und Machine Learning Threat Detection Framework AKTAION. CHIRON analysiert und zeigt Daten von P0f, Nmap und BRO IDS an. CHIRON wurde für das häusliche Umfeld entwickelt und vermittelt Ihnen ein besseres Verständnis für die Risiken von Heim-Internet-Geräten (Internet der Dinge, Computer, Mobiltelefone, Tablets usw.).</li>
+</ul>
+<p><a href="https://github.com/jzadeh/chiron-elk" target="_blank" rel="noopener">https://github.com/jzadeh/chiron-elk</a></p>
+<ul>
+<li>Cloud Security Suite: One-Stop-Tool für die AWS / GCP / Azure-Sicherheitsprüfung bei<br>CS Suite ist ein One-Stop-Tool zur Überprüfung der Sicherheit Ihrer AWS-Infrastruktur. Die CS Suite nutzt die Vorteile der aktuellen Open-Source-Tooling-Funktionen und fügt für ein einfacheres Tool weitere fehlende Überprüfungen hinzu.</li>
+</ul>
+<p><a href="https://github.com/SecurityFTW/cs-suite" target="_blank" rel="noopener">https://github.com/SecurityFTW/cs-suite</a></p>
+<ul>
+<li>DejaVu: Ein Open-Source-Spoofing-Framework<br>DejaVu ist ein Open-Source-Spoofing-Framework. Verteidiger können damit mehrere interaktive Köder (HTTP-Server, SQL, SMB, FTP, SSH, Client - NBNS) in verschiedenen VLAN-Netzwerken strategisch einsetzen. Um die Verwaltung von Köder zu vereinfachen, bietet das Framework auch eine Web-Management-Schnittstelle, mit der alle Köder über eine zentrale Konsole effektiv bereitgestellt, verwaltet und konfiguriert werden können. Das Dashboard “Logging and Alerts” (Protokollierung und Warnungen) zeigt detaillierte Informationen zu den generierten Alerts an und kann für die Verarbeitung dieser Alerts konfiguriert werden.</li>
+</ul>
+<p><a href="https://github.com/bhdresh/Dejavu" target="_blank" rel="noopener">https://github.com/bhdresh/Dejavu</a></p>
+<h3 id="12-OSINT-Open-Source-Intelligence"><a href="#12-OSINT-Open-Source-Intelligence" class="headerlink" title="12.OSINT - Open Source Intelligence"></a>12.OSINT - Open Source Intelligence</h3><ul>
+<li>DataSploit 2.0<br>DataSploit ist ein Verfahren zur Open Source Intelligence (OSINT) der Hilfe, hat die folgenden Merkmale:<ul>
+<li><ol>
+<li>Domain / E-Mail / Benutzername / IP zu suchen und relevante Informationen aus verschiedenen Quellen zu finden.</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Relevanz und die Ergebnisse verarbeitet, so dass sie in einer einheitlichen Art und Weise zeigt.</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>versuchen, Beweise für die Ziele im Zusammenhang zu finden, api-Schlüssel, Token, Subdomains, Domain-Geschichte, alte Portale.</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>Die Verwendung eines speziellen Skript spezifischen Daten automatisch OSINT gesammelt.</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Validieren Sie die gesammelten Daten.</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>Der Bericht wird generiert, HTML, JSON oder txt-Formate.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/DataSploit/datasploit" target="_blank" rel="noopener">Https://github.com/DataSploit/datasploit</a></p>
+<ul>
+<li>Dradis-Framework: Erfahren Sie, wie Sie die Berichtszeit um die Hälfte reduzieren können<br>DRADIS ist eine angepasste für InfoSec Team maßgeschneidert Open Source Framework für die Zusammenarbeit.</li>
+</ul>
+<p><a href="https://github.com/dradis/dradis-ce" target="_blank" rel="noopener">Https://github.com/dradis/dradis-ce</a></p>
+<h3 id="13-Reverse-Engineering"><a href="#13-Reverse-Engineering" class="headerlink" title="13. Reverse Engineering"></a>13. Reverse Engineering</h3><ul>
+<li>Schlange: Malware Storage Zoo<br>Snake ist ein Aufbewahrungsbehälter für Malware. Snake ist so konzipiert, ausreichende Informationen liefern Analysten zu ermöglichen, schnell und effizient das beste Werkzeug für die anstehende Aufgabe wählen. Es bietet auch alles von der statischen Analyse bis zur Interaktion mit externen Diensten.</li>
+</ul>
+<p><a href="https://github.com/countercept/snake" target="_blank" rel="noopener">Https://github.com/countercept/snake</a></p>
+<h3 id="14-Smart-Grid-Industrial-Security"><a href="#14-Smart-Grid-Industrial-Security" class="headerlink" title="14. Smart Grid / Industrial Security"></a>14. Smart Grid / Industrial Security</h3><ul>
+<li>GRFICS: Graphic Realism Framework für industrielle Steuerungssimulation<br>GRFICS ist ein grafischer Rahmen für industrielle Steuerungssimulation, die Grafiken Unity 3D-Engine nutzt industrielle Steuerungssystemsicherheit Eintrittsbarrieren zu reduzieren. GRFICS für gemeinsame Angriff Benutzer mit vollständigen virtuellen industriellen Kontrollsystem (IKS) Netzwerk, Unterstützung, einschließlich Befehls Injektion, Pufferüberläufe und Mittelsmänner, und durch die Auswirkungen des Angriffs auf die 3D-Visualisierung intuitiver zeigt. Darüber hinaus können die Benutzer auch ihre defensiven Fähigkeiten unter Verwendung einer leistungsfähigen Firewall-Regeln üben oder richtig Network Intrusion Detection Regeln isolieren schreiben.</li>
+</ul>
+<p><a href="https://github.com/djformby/GRFICS" target="_blank" rel="noopener">Https://github.com/djformby/GRFICS</a></p>
+<h3 id="15-Schwachstellenbewertung"><a href="#15-Schwachstellenbewertung" class="headerlink" title="15. Schwachstellenbewertung"></a>15. Schwachstellenbewertung</h3><ul>
+<li>Robustheit Toolbox für maschinelles Lernen Modelle<br>kontradiktorische-Robustheit-Toolbox Toolbox auf ein konfrontative maschinelles Lernen gewidmet ist. Entwickelt Forscher bauen schnell Modelle für maschinelles Lernen verwendet, um die Angriffs- und Verteidigungsmethoden zu analysieren. Es bietet auch viele der neuesten Art von Angriff und Verteidigung.</li>
+</ul>
+<p><a href="https://github.com/IBM/adversarial-robustness-toolbox" target="_blank" rel="noopener">Https://github.com/IBM/adversarial-robustness-toolbox</a></p>
+<ul>
+<li>Dynamisches Analyse-Tool für Android (ADA)<br>Dies ist ein Android-basiertes dynamisches Analysetool.</li>
+</ul>
+<p><a href="https://github.com/ANELKAOS/ada" target="_blank" rel="noopener">Https://github.com/ANELKAOS/ada</a></p>
+<ul>
+<li>Bogenschießen: Open Source Vulnerability Assessment and Management<br>Bogenschießen ist ein Open Source Vulnerability Assessment und Management-Tools Entwickler und Vermesser, um das Scannen und Schwachstellen-Management durchzuführen. Bogenschießen der populären Open-Source-Tools einen Scan der Web-Anwendungen und Netzwerk auszuführen. Es führt auch dynamische Authentifizierung Web Application Scanning und verwendet Selen die gesamte Anwendung zu decken. Entwickler können das Tool auch verwenden, um seine DevOps CI / CD-Umgebung zu erreichen.</li>
+</ul>
+<p><a href="https://github.com/archerysec/archerysec" target="_blank" rel="noopener">Https://github.com/archerysec/archerysec</a></p>
+<ul>
+<li>Boofuzz<br>Boofuzz ​​ist ein Zweig der alten und Nachfolger Sulley vageen Rahmen. Es behebt viele Bugs und verbessert die Skalierbarkeit.</li>
+</ul>
+<p><a href="https://github.com/jtpereyda/boofuzz" target="_blank" rel="noopener">Https://github.com/jtpereyda/boofuzz</a></p>
+<ul>
+<li>BTA<br>BTA ist ein Open-Source-Framework für die Active Directory-Sicherheitsüberwachung. Kann den Prüfern helfen, die folgenden Informationen zu erhalten:<ul>
+<li><ol>
+<li>Das Zielobjekt (Computer, Benutzer-Accounts, etc.) Berechtigungen</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Zugang zum Postfach</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Kontoinformationen für Domänenadministratorberechtigungen</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>Erweiterte Berechtigungsinformationen usw.</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>Änderungen in AD zwischen zwei Zeitpunkten</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/airbus-seclab/bta" target="_blank" rel="noopener">Https://github.com/airbus-seclab/bta</a></p>
+<ul>
+<li>Nutzen Sie<br>DeepExploit vollständig Penetrations Prüfwerkzeug Metasploit und Links automatisiert. Auf DeepExploit Identifizierung der Zielserver alle offenen Ports und verwendet in einer präzisen Art und Weise nutzt maschinelles Lernen. Die wichtigsten Merkmale sind diese Punkte: effizient nutzt, ein tiefes Eindringen, selbstlernend und Einarbeitungszeit kurz ist.</li>
+</ul>
+<p><a href="https://github.com/13o-bbr-bbq/machine_learning_security/tree/master/DeepExploit" target="_blank" rel="noopener">Https://github.com/13o-bbr-bbq/machine_learning_security/tree/master/DeepExploit</a></p>
+<ul>
+<li>Halcyon IDE: für Nmap-Skriptentwickler<br>Halcyon IDE kann Nmap Skript schnell und einfach entwickeln erweiterte Scan über die Anwendung und Infrastruktur durchzuführen. Es ist die erste zu Nmap Skript Entwicklung IDE gewidmet Veröffentlichung.</li>
+</ul>
+<p><a href="https://github.com/s4n7h0/Halcyon" target="_blank" rel="noopener">Https://github.com/s4n7h0/Halcyon</a></p>
+<ul>
+<li>SimpleRisk<br>SimpleRisk ist ein Open-Source-Tool, das Sicherheitsexperten das Verhalten der Risikokontrolle verwalten helfen können. SimpleRisk stellt ein Risikomanagement-Bedienfeld für den Benutzer, das System oben gezeigt, den Zustand des Teams und Sicherheitstechnologien sowie Risiko des laufenden Projekts zu lösen.</li>
+</ul>
+<p><a href="https://github.com/simplerisk" target="_blank" rel="noopener">Https://github.com/simplerisk</a></p>
+<ul>
+<li>TROMMEL<br>TROMMEL verwendet wird Embedded-Device-Dateien zu screenen Potenzial verwundbar Ziele zu identifizieren.</li>
+</ul>
+<p><a href="https://github.com/CERTCC/trommel" target="_blank" rel="noopener">Https://github.com/CERTCC/trommel</a></p>
+<h3 id="16-Web-AppSec"><a href="#16-Web-AppSec" class="headerlink" title="16.Web AppSec"></a>16.Web AppSec</h3><p>Werfen Sie einen Blick auf NGINX der ModSec 3.0 - Software Web Application Firewall<br>ModSecurity ist ein Web Application Firewall-Engine, die benutzerdefinierte Konfiguration und Regeln unterstützt.</p>
+<p><a href="https://github.com/SpiderLabs/ModSecurity" target="_blank" rel="noopener">Https://github.com/SpiderLabs/ModSecurity</a></p>
+<ul>
+<li>Astra: Automatischer Sicherheitstest der REST API<br>Astra ermöglicht Sicherheitsingenieure oder im Entwicklungsprozess verwendeten Entwickler können sie Schwachstellen früh im Entwicklungszyklus erkennen und beheben. Astra kann automatisch detektieren und Test Anmelde- und Abmelde (Authentication API), so kann man leicht in CICD Kanal integrieren.</li>
+</ul>
+<p><a href="https://github.com/flipkart-incubator/Astra" target="_blank" rel="noopener">Https://github.com/flipkart-incubator/Astra</a></p>
+<ul>
+<li>Spuck Replicator: Replikation von automatisierten komplexen Anfälligkeiten<br>Replicator ist ein Spuck Erweiterung, kann es helfen Entwicklern, die Penetrationstest Probleme reproduzieren. Penetration Testing Replicator erzeugt eine Datei mit den Schlussfolgerungen des Berichts enthalten. Replicator Tester die Datei an den Client senden, können Sie die Datei und wiederkehrende Probleme in der Spuck öffnen.</li>
+</ul>
+<p><a href="https://github.com/PortSwigger/replicator" target="_blank" rel="noopener">Https://github.com/PortSwigger/replicator</a></p>
+<ul>
+<li>OWASP offensives Web-Testing-Framework<br>WASP OWTF ist ein Schwerpunkt auf Penetration und Sicherheitstests, OWASP Testing (v3 und v4), OWASP Top 10, PTES und Sicherheitsstandards wie NIST Web-Test-Framework. Das Tool ist in hohem Maße konfigurierbar, kann jeder leicht eine einfache Plug-in-Konfigurationsdatei erstellen oder einen neuen Test, ohne Entwicklung Erfahrung hinzufügen.</li>
+</ul>
+<p><a href="https://github.com/owtf/owtf" target="_blank" rel="noopener">Https://github.com/owtf/owtf</a></p>
+<ul>
+<li>OWASP JoomScan-Projekt<br>OWASP Joomla ist ein Open Source Vulnerability Scanner entwickelt, um Auto-Sicherheitsanfälligkeit Joomla CMS Implementierung und Zuverlässigkeit Sicherungsaufgaben zu erfassen. Es kann nicht nur bekannte Angriff Schwachstellen erkennen, aber auch viele Fehler Konfiguration und Administrator-Defekte erkennen kann. Darüber hinaus bietet OWASP JoomScan eine benutzerfreundliche Oberfläche und Formatieren von Text und HTML-Ausgabe berichtet.</li>
+</ul>
+<p><a href="https://github.com/rezasp/joomscan" target="_blank" rel="noopener">Https://github.com/rezasp/joomscan</a></p>
+<ul>
+<li>WSSAT<br>SSAT ist eine Open-Source-Web-Services-Sicherheit Scan-Tool, das durch Bearbeitung einer Konfigurationsdatei hinzufügen, aktualisieren oder löschen Verwundbarkeit eine dynamische Umgebung zur Verfügung stellt. Dieses Tool nimmt als Eingabe eine Adressliste WSDL-Dateien für Sicherheitslücken statische und dynamische Tests für jeden Dienst.</li>
+</ul>
+<p><a href="https://github.com/YalcinYolalan/WSSAT" target="_blank" rel="noopener">Https://github.com/YalcinYolalan/WSSAT</a></p>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2018/10/09/Android-Sicherheits-Checkliste/">Android-Sicherheits-Checkliste</a><a class="next" href="/2018/08/25/2018 Sicherheitsbewusstsein TOP-10/">2018 Sicherheitsbewusstsein TOP-10</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/09/Android-Sicherheits-Checkliste/">Android-Sicherheits-Checkliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/2018BlackHat Werkzeug/">2018BlackHat Werkzeug</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/2018 Sicherheitsbewusstsein TOP-10/">2018 Sicherheitsbewusstsein TOP-10</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/API-Sicherheitsentwicklungscheckliste/">API-Sicherheitsentwicklungscheckliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/10/APP Sicherheitstest/">APP Sicherheitstest</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/12/IOS Sicherheitscheckliste/">IOS Sicherheitscheckliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Sicherheitsschulung/">Sicherheitsschulung</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/Sicherheitsdesign Checkliste/">Sicherheitsdesign Checkliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/Über 20 Jahre Java-Sandbox-Flucht/">Über 20 Jahre Java-Sandbox-Flucht</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/Trading System Häufig gestellte Fragen und Lösungen Übersicht/">Trading System Häufig gestellte Fragen und Lösungen Übersicht</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">hellozz.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

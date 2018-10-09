@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="de-DE"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Android-Sicherheits-Checkliste | hellozz</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Android-Sicherheits-Checkliste</h1><a id="logo" href="/.">hellozz</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Android-Sicherheits-Checkliste</h1><div class="post-meta">Oct 9, 2018</div><div class="post-content"><ul>
+<li>Projekt</li>
+<li>Bewertung interne Rating-Scanner zu erfassen, ob</li>
+<li>Nachweis</li>
+<li>Gefahren</li>
+<li><p>Bemerkungen</p>
+</li>
+<li><p>Die Anwendung kann debuggt werden</p>
+</li>
+<li>hoch niedrig ja</li>
+<li>Überprüfen Sie die Stilliste, um zu sehen, ob sie debuggt werden darf. Überprüfen Sie, ob die Anwendung Anti-Debugging-Techniken verwendet, um zusätzliches Debugging zu verhindern.</li>
+<li><p>Anwendungen, die debuggt werden können, reduzieren die Kosten von Reverse Engineering-Anwendungen.</p>
+</li>
+<li><p>Apps können gesichert werden</p>
+</li>
+<li>hoch niedrig ja</li>
+<li>Überprüfen Sie die Stilliste, um zu sehen, ob sie gesichert werden darf.</li>
+<li><p>Sichern Sie Anwendungen und Daten auf Geräten mit aktiviertem USB-Debugging und greifen Sie auf private Datenverzeichnisse zu, wenn das Gerät keinen Root hat.</p>
+</li>
+<li><p>ContentProvider Berechtigungsproblem</p>
+</li>
+<li>Spezifische Analyse Spezifische Analyse ja</li>
+<li>Überprüfen Sie die Stilliste, um festzustellen, ob für den ContentProvider genügend Berechtigungseinschränkungen bestehen.</li>
+<li><p>Ein Angreifer kann uneingeschränkten Zugriff auf vertrauliche ContentProvider für private Daten oder die Erweiterung von Berechtigungen erhalten.</p>
+</li>
+<li><p>Redundante Berechtigungen</p>
+</li>
+<li>Low Low ja</li>
+<li>Überprüfen Sie die Stilliste, um zu sehen, ob redundante Berechtigungen registriert sind.</li>
+<li>Redundante Berechtigungen führen dazu, dass ein Angreifer im Falle einer Sicherheitsanfälligkeit bei der Codeausführung mehr Anwendungsprivilegien erhält.</li>
+<li><p>Android hat einige Berechtigungen in der neuen Version abgelehnt. Selbst wenn Sie es hinzufügen, können Sie keine verwandten Funktionen verwenden. <a href="https://developer.android.com/reference/android/Manifest.permission.html#READ_LOGS" target="_blank" rel="noopener">https://developer.android.com/reference/android/Manifest.permission.html#READ_LOGS</a></p>
+</li>
+<li><p>Code kann neu verpackt werden</p>
+</li>
+<li>Hoch Tief ja</li>
+<li>Packen Sie die Anwendung aus, manipulieren Sie den Inhalt und signieren Sie erneut, stellen Sie fest, ob das Programm dem Dekompiler eine Verarbeitung hinzugefügt hat, und überprüfen Sie dessen Integrität.</li>
+<li><p>Neuverpackungen können dazu führen, dass gefälschte Anwendungen auf dem Markt erscheinen und die Sicherheit der Benutzer gefährden.</p>
+</li>
+<li><p>Client-SQL Injection</p>
+</li>
+<li>Hohe spezifische Analyse Forschung</li>
+<li>in Übereinstimmung mit der Injektion signifikant sein kann, angesichts der Injektion Blinddetektion Weise durch Zugabe‘,“, +, und, oder, xor usw. geschlossen Symbole bestimmt Zeichen Logik, ob eine Sicherheitslücke SQL Injektion vorhanden ist.</li>
+<li>ein Angreifer eine lokale SQL-Injection-Schwachstelle verwenden, um den Zugriff auf sensible Informationen in der Datenbank führen könnte, weitere Steuerbenutzerkonten und andere Zwecke zu erreichen.</li>
+<li><p>Sie müssen einen ausführbaren Pfad finden</p>
+</li>
+<li><p>unsichere Lagerung</p>
+</li>
+<li>Spezifische Analyse Spezifische Analyse ja</li>
+<li>Statische Analyse der Anwendungslogik und installierte das Gerät seine Daten und Berechtigungen überprüft, um festzustellen, ob die Anwendung sinnvoll ist die Sandbox zu verwenden private Daten und Identitätsnachweise zu schützen, wenn es sensible Informationen Verhalten auf das erweiterten Speicher (TF-Karte).</li>
+<li><p>Falscher Datenspeicher kann dazu führen, dass ein Angreifer vertrauliche Daten über Anwendungen hinweg erhält.</p>
+</li>
+<li><p>Passwort Passwort vergessen</p>
+</li>
+<li>Analyse der spezifischen Forschungs</li>
+<li>Analysieren Sie die Anwendungslogik statisch und überprüfen Sie das Datenverzeichnis auf dem Gerät.</li>
+<li><p>Durch die sichere Kennwortspeicherung können Anwendungen anfälliger für forensische Tools werden.</p>
+</li>
+<li><p>Unsichere SSL-Server-Einsatz</p>
+</li>
+<li>Hohe spezifische Analyse ja</li>
+<li>Analyse des Kommunikations-API-Servers überprüft, ob eine verschlüsselte Verbindung zu ermöglichen, ob veraltete Cipher-Suite, Cipher-Suite für bekannte Schwachstellen, ob die Stärke der wichtigsten Anforderungen.</li>
+<li><p>unsichere Server SSL-Verschlüsselung Stärke ist vor allem der Bereitstellung führen wird, oder unter Androhung von bekannten Angriffen, die es einem Angreifer ermöglichen, den Schlüssel zu knacken, um Middle-Angriffe zu erreichen.</p>
+</li>
+<li><p>sensible Daten in Klartext übertragen</p>
+</li>
+<li>hoch in Umfrage</li>
+<li>Analysieren Sie, ob sensible Daten in den Kommunikationsdaten der Anwendung und des Hintergrundservers im Klartext übertragen werden.</li>
+<li><p>Informationsverlust kann auftreten, wenn ein Benutzer von einem Mann angegriffen wird.</p>
+</li>
+<li><p>Falsche Kalibrierzertifikat</p>
+</li>
+<li>Hoch Mittel ja</li>
+<li>Statische Analyse-Programm verwendet richtig die SSL-Zertifikat Überprüfung, dass das Domain-Name-Zertifikat Emittent gültig zu überprüfen.</li>
+<li><p>Der Kunde nicht das richtige Zertifikat nicht überprüfen kann Middle-Angriffen führen.</p>
+</li>
+<li><p>Verwendung von Nicht SSL Pinning</p>
+</li>
+<li>Niedrige Forschung</li>
+<li>Statische Analyse-Programm wird mit SSL Pinning.</li>
+<li>Ein Angreifer Root-Zertifikate auf einer Webseite zur Verfügung stellen könnte zum Herunterladen, Installieren induzieren Opfer Vertrauen, so dass die App auch nach dem richtigen Zertifikat-Verifizierungsprozess Api Angreifer ausnutzen kann, noch Middle-Angriffen vollständig entschlüsselt Verkehr, zu erreichen sein.</li>
+<li><p>Android ist sehr problematisch, das folgende Zertifikat zu installieren</p>
+</li>
+<li><p>WebView Sicherheit</p>
+</li>
+<li>Hohe spezifische Analyse ja</li>
+<li>Statische Analyse und dynamische Verknüpfung Tracking-Anwendung, ob es Objekte WebView Injection-Schwachstelle und die damit verbundene Funktionen falsch mit WebView ist, wenn nicht Sie Ihr Passwort verboten, erlaubt Javascript diesen Bereich zu betreten, Zertifikat Fehler ignorieren.</li>
+<li><p>WebView Risiken könnten böswillige Benutzer führen die Anwendung zu installieren, wenn Sie die Seite durchsuchen, stehlen private Dateien.</p>
+</li>
+<li><p>Die Deinstallation der Anwendung kann die zwischengespeicherten Daten nicht löschen</p>
+</li>
+<li>Niedrige Forschung</li>
+<li>Überprüfen Sie den Speicherort und die Deinstallationslogik des Anwendungsspeicherorts.</li>
+<li>Wenn die Cache-Daten vertrauliche Informationen enthalten, kann es Gefahr von Informationslecks sein.</li>
+<li>Sensible Informationen ermöglichen die Verwendung der Zwischenablage</li>
+<li>niedrig nein</li>
+<li>Überprüfen Sie, ob die anwendungsspezifischen Informationen vom Benutzer kopiert werden können.</li>
+<li><p>Auf die Android-System-Zwischenablage kann von jeder Anwendung zugegriffen werden, und es besteht das Risiko der Offenlegung von Informationen, wenn Benutzer vertrauliche Daten kopieren dürfen.</p>
+</li>
+<li><p>Lokale Authentifizierungsumgehung</p>
+</li>
+<li>Hohe spezifische Analyse nein</li>
+<li>Statische Analyse, ob lokale Authentifizierungsmaßnahmen (wie Gestenpasswörter) umgangen werden können.</li>
+<li><p>Logische Probleme können dazu führen, dass die lokale Authentifizierung umgangen wird und Benutzerdaten oder Identitätsnachweise erhalten, wenn das Gerät physisch kontaktiert wird.</p>
+</li>
+<li><p>Lokaler Socket-Port</p>
+</li>
+<li>Spezifische Analyse Spezifische Analyse ja</li>
+<li>Überprüfen Sie, ob Daten gefälscht werden können, um mit dem lokalen Socket-Port und der Antwortlogik auf ausnutzbare Sicherheitslücken zu kommunizieren.</li>
+<li><p>Die Socket-Server-Logik kann beliebig durch Datenfälschung ausgelöst werden.</p>
+</li>
+<li><p>Aktivitätsentführung</p>
+</li>
+<li>Hohe spezifische Analyse ja</li>
+<li>Statische Analyse-Anwendung kombiniert mit dynamischem Tracking, um zu prüfen, ob die Schnittstelle für Phishing-Attacken missbraucht werden kann.</li>
+<li><p>Aktivitäts-Hijacking kann eine Hijacking-Schnittstelle implementieren, die Benutzer dazu bringt, Schlüsselinformationen wie Passwörter einzugeben</p>
+</li>
+<li><p>Befehlsinjektion</p>
+</li>
+<li>Hohe spezifische Analyse ja</li>
+<li>Überprüfen Sie, ob die Anwendung Befehlsinjektion hat</li>
+<li><p>Die Befehlsinjektion kann zu einer beliebigen Befehlsausführung führen</p>
+</li>
+<li><p>Gewähren Sie dynamisch URI-Berechtigungen mit impliziten Absichten</p>
+</li>
+<li>Spezifische Analyse Spezifische Analyse ja</li>
+<li>Überprüfen Sie, ob die Absicht, die die Berechtigung für dynamische Grant-URIs verwendet, explizit ist.</li>
+<li><p>Wenn eine Absicht, die dem ContentProvider Lese- oder Schreibrechte erteilt, entführt wird, besteht das Risiko der Offenlegung oder Manipulation von Informationen</p>
+</li>
+<li><p>Sendung oder beabsichtigte Fälschung</p>
+</li>
+<li>spezifische Analyse Forschung analysieren</li>
+<li>Statische Analyseanwendung in Kombination mit dynamischer Verfolgung, um zu prüfen, ob ein bestimmter Prozess einer Anwendung durch das Aussenden einer Broadcast-Nachricht ausgelöst werden kann.</li>
+<li><p>Durch Broadcast-Fälschung können Anwendungen bestimmte Prozesse ausführen, wodurch gefälschte Benutzeranfragen, Denial-of-Service-Angriffe, lokale Eskalation von Berechtigungen und vieles mehr ermöglicht werden.</p>
+</li>
+<li><p>Sendung oder vorsätzliche Entführung</p>
+</li>
+<li>Spezifische Analyse Spezifische Analyse ja</li>
+<li>Statische Analyseanwendung kombiniert mit dynamischer Verfolgung, um zu prüfen, ob sensible Informationen an die Übertragung gesendet werden.</li>
+<li><p>Broadcast-Hijacking fängt die Broadcast-Nachricht der Anwendung ab und erhält vertrauliche Informationen in den Parametern.</p>
+</li>
+<li><p>Zip-Pfad Kreuzung</p>
+</li>
+<li>Hohe spezifische Analyse Forschung</li>
+<li>Statische Analyseanwendung, um zu überprüfen, ob die Zip-Dekompression korrekt gehandhabt wird.</li>
+<li>Mit einer gut konstruierten Zip-Datei können Sie die privaten Daten der Anwendung über Pfade hinweg überschreiben, wodurch die Ausführung beliebigen Codes ermöglicht wird.</li>
+<li><p>Sie müssen den Ausführungspfad finden</p>
+</li>
+<li><p>Client XSS</p>
+</li>
+<li>Hohe spezifische Analyse Forschung</li>
+<li>Statische Analyse und Fuzzing, um zu überprüfen, ob der Client beim Rendern der HTML-Schnittstelle bösartigen Code rendern kann.</li>
+<li><p>Verwenden Sie gut konstruierte Eingaben, um spezifische Logik in die clientseitige HTML-Schnittstelle einzubetten, um weitere Benutzeranmeldeinformationen und mehr zu erhalten.</p>
+</li>
+<li><p>Kryptographie Umsetzungsfragen</p>
+</li>
+<li>Spezifische Analyse Spezifische Analyse</li>
+<li>Statische Analyse von Anwendungslogik und dynamischer Ablaufverfolgung, Funktionsaufrufe mit umgekehrter Kryptografie, Überprüfung auf fehlerhafte kryptografische Implementierungen, z. B. hartcodierte symmetrische Verschlüsselungsschlüssel oder ungenügende Einzelstreuungsfunktionen.</li>
+<li><p>Falsche Verschlüsselungsfunktionen zu erreichen, die Verschlüsselungsstärke zu einer deutlichen Reduktion führen wird, in Kombination mit anderen Problemen weiteren Angriffen Anwendungen.</p>
+</li>
+<li><p>Unsichere Benutzerauthentifizierung</p>
+</li>
+<li>Hohe spezifische Analyse nein</li>
+<li>Statische und dynamische Analyse Tracking Anwendungslogik Kombination, Prozessrückwärtsbenutzerauthentifizierung zu prüfen, ob es ein logisch und Umsetzung Anfälligkeiten ist.</li>
+<li><p>Die Benutzerauthentifizierung kann zu unsicheren Benutzeridentität führen betrügerisch ist, sie die Bibliothek Angriffe getroffen, gefährden Kontosicherheit.</p>
+</li>
+<li><p>IP-Netzwerk Leck</p>
+</li>
+<li>Mittel Niedrig Ja</li>
+<li>Statische Analyse Code der Anwendung enthält eine hartcodierte Server private Adresse.</li>
+<li><p>Ein Angreifer kann die in Verbindung mit anderen Server-Anwendungen wie Intranet gestartet SSRF Arten von Angriffen erhielt Adresse verwenden.</p>
+</li>
+<li><p>Fehlerseite, bei der private Informationen verloren gehen</p>
+</li>
+<li>Geringe keine spezifische Analyse</li>
+<li>Überprüfen Sie, ob die Fehlermeldung vertrauliche Informationen im abnormalen Zustand der Anwendung enthält.</li>
+<li><p>Wenn die Client- oder Serverausnahmeinformationen vertrauliche Daten enthalten, kann dies zu Datenlecks führen oder zusätzliche Informationen für den Angreifer liefern.</p>
+</li>
+<li><p>Client-Pfadüberquerung</p>
+</li>
+<li>Hohe spezifische Analyse Forschung</li>
+<li>Statische Analyse der Anwendungslogik und dynamische Tracking-Programmausführung.</li>
+<li>Ein Angreifer kann die privaten Daten-Anwendungen greifen auf die Path Traversal Probleme verwenden.</li>
+<li><p>Sie müssen einen ausführbaren Pfad finden</p>
+</li>
+<li><p>Code von Drittanbietern Probleme</p>
+</li>
+<li>spezifische Analyse Forschung analysieren</li>
+<li>Erkennung von Drittanbieter-SDKs und Programmreferenzen und deren Versionen, um nach bekannten Sicherheitslücken, Hintertüren und sogar bösartigem Code zu suchen.</li>
+<li><p>Drittanbieter-Code-Programm eingeführt von SDK und anderen Wegen, wie solche, die Backdoors, Bugs, etc., wird direkt die Sicherheit der Anwendung selbst betreffen, und schwer zu reparieren selbst.</p>
+</li>
+<li><p>empfindliche Inhaltsausgabe in das Protokoll</p>
+</li>
+<li>Geringe spezifische Analyse Forschung</li>
+<li>Verwendung von statischen und dynamischen Analyse kombinierten Betrieb, prüft die Anwendung, ob die sensiblen Informationen Ausgang mit dem Protokoll.</li>
+<li><p>Ein Angreifer könnte die Systemprotokolle über Anwendungen den Zugriff auf Informationen lesen.</p>
+</li>
+<li><p>Keylogging Schutz ist nicht aktiviert</p>
+</li>
+<li>Niedrige Forschung</li>
+<li>Statische Analyse-Anwendung ausführbare Dateien, kombiniert mit dynamischen Tracking, Anforderungen Sicherheit abhängig von der Anwendung, um zu bestimmen, ob Sie Eingabesteuerungen für bestimmte benutzerdefinierten Soft-Tastatur hinzufügen müssen.</li>
+<li><p>Tastatur-System führen können Anwendungen von Drittanbietern die Tastaturpuffer einen Benutzernamen erhalten zu lesen, oder Screen-Recording-Intercept-Benutzereingabe verwenden.</p>
+</li>
+<li><p>Sensible Anwendung ohne Root-Erkennung</p>
+</li>
+<li>Low Low ja</li>
+<li>Die Anwendungslogik der statischen Analyse wird mit der tatsächlichen Maschineninstallation kombiniert, um zu bestimmen, ob die Anwendung die Umgebung gemäß ihren eigenen Bedürfnissen erkennt und den Benutzer über die potentiellen Risiken nach root informiert.</li>
+<li><p>Die Angriffsfläche der App wird auf dem Root-Gerät stark erhöht.Die Malware kann die nicht-öffentliche API, Hook und andere Technologien verwenden, um die Anwendungs-Sandbox zu umgehen und sensible Informationen wie Benutzer-Token und Anmeldedaten zu erhalten.</p>
+</li>
+<li><p>Unzulässige Zugriffskontrolle</p>
+</li>
+<li>hoch niedrig</li>
+<li>Statische Analyse-Anwendung ausführbare Dateien, kombiniert mit dynamischen Tracking-und Analyse-Anwendung Zugriffssteuerungsmodell erfüllen die Sicherheitsanforderungen.</li>
+<li><p>Falsche Benutzerzugriffskontrollpolitik zu sensiblen Informationen sind durchgesickert führen kann.</p>
+</li>
+<li><p>Logische Defekte</p>
+</li>
+<li>spezifische Analyse nicht analysieren</li>
+<li>Statische Analyse-Anwendung ausführbare Dateien, kombiniert mit dynamischen Tracking-und Analyse-Anwendung können über das Vorhandensein oder Fehlen eines logischen Fehlers angegriffen werden.</li>
+<li><p>Logikfehler wird die Anwendung dazu führen, dass nicht-Design erwartetes Verhalten erscheinen.</p>
+</li>
+<li><p>Nativer Code kann debuggt werden</p>
+</li>
+<li>Medium Spezifische Analyse Nr</li>
+<li>Dynamische Analyse, ob der native Teil der Anwendung Anti-Debugging-Techniken verwendet, um zu verhindern, dass Code dynamisch debuggt wird.</li>
+<li>Nativer Code kann debuggt werden, um die Kosten für Reverse Engineering für die Anwendung zu reduzieren.</li>
+</ul>
+</div><div class="tags"></div><div class="post-nav"><a class="next" href="/2018/09/28/2018BlackHat Werkzeug/">2018BlackHat Werkzeug</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/09/Android-Sicherheits-Checkliste/">Android-Sicherheits-Checkliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/2018BlackHat Werkzeug/">2018BlackHat Werkzeug</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/2018 Sicherheitsbewusstsein TOP-10/">2018 Sicherheitsbewusstsein TOP-10</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/API-Sicherheitsentwicklungscheckliste/">API-Sicherheitsentwicklungscheckliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/10/APP Sicherheitstest/">APP Sicherheitstest</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/12/IOS Sicherheitscheckliste/">IOS Sicherheitscheckliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Sicherheitsschulung/">Sicherheitsschulung</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/Sicherheitsdesign Checkliste/">Sicherheitsdesign Checkliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/Über 20 Jahre Java-Sandbox-Flucht/">Über 20 Jahre Java-Sandbox-Flucht</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/Trading System Häufig gestellte Fragen und Lösungen Übersicht/">Trading System Häufig gestellte Fragen und Lösungen Übersicht</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">hellozz.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

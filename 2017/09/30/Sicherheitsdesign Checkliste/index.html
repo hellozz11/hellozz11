@@ -1,0 +1,402 @@
+<!DOCTYPE html><html lang="de-DE"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Sicherheitsdesign Checkliste | hellozz</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Sicherheitsdesign Checkliste</h1><a id="logo" href="/.">hellozz</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Sicherheitsdesign Checkliste</h1><div class="post-meta">Sep 30, 2017</div><div class="post-content"><h2 id="ein-die-Eingabevalidierung"><a href="#ein-die-Eingabevalidierung" class="headerlink" title="ein, die Eingabevalidierung"></a>ein, die Eingabevalidierung</h2><ul>
+<li><p>Wenn die nicht vertrauenswürdigen Daten über Vertrauensgrenzen hinweg weitergegeben Prüfung (Politik prüft die Rechtmäßigkeit der Daten, einschließlich Whitelisting Mechanismus, etc.) Format-String, haben noch die Legitimität der Benutzereingabe zu verifizieren, kann das System eine Denial-of-Service oder die Offenlegung von Informationen zu vermeiden</p>
+</li>
+<li><p>Transfer Verboten nicht vertrauenswürdigen Java Runtime.exec () -Methode, die Rohdaten (wenn die Parameter Leerzeichen enthalten, doppelte Anführungszeichen, beginnend mit - oder / Schaltersymbol zeigt an, wenn ein Parameter, kann der Parameter Injection-Schwachstelle verursachen), ist es empfehlenswert, wenn JVM ausführen können externe Befehle deaktiviert werden, werden unbekannte Schwachstellen erheblich die Gefahr verringern, kann erheblich die Sicherheit der JVM verbessern.</p>
+</li>
+<li><p>es sollte zunächst auf den tatsächlichen Pfad normalisiert werden (spezielle Dateinamen, wie „..“, symbolische Links, harte Links, Verknüpfungen), bevor die Überprüfung Pfad</p>
+</li>
+<li><p>Von ZipInputStream Dateien in einem Verzeichnis extrahiert nicht im Programm, wenn das Programm erwartet wird, sollte es ablehnen, um zu extrahieren, oder es an einen sicheren Ort extrahieren</p>
+</li>
+<li><p>Von ZipInputStream Dateien extrahieren, wenn die Dateigröße nach der Dekompression eine bestimmte Grenze überschreitet, müssen Sie ablehnen unzip</p>
+</li>
+<li><p>Vor der Behandlung sicherzustellen, dass alle Daten vom Client, einschließlich: alle Parameter, URL, HTTP-Header-Informationen (zum Beispiel: Cookie-Name und Datenwert), einschließlich der Post von JavaScript, Flash oder anderer eingebetteter Code Rückinformation Bestimmung</p>
+</li>
+<li><p>Wenn eine potenziell gefährliche Zeichen müssen als Eingabe verwendet werden, stellen Sie sicher, dass Sie zusätzliche Sicherheitskontrollen durchführen, wie zum Beispiel: die Flucht Ein- und Ausgabecodierung, wie spezifische Sicherheits-API. Einige gemeinsamen gefährliche Zeichen, einschließlich, aber nicht beschränkt auf: &lt;&gt; “ ‘% () &amp; + \ \’ \ ‘</p>
+</li>
+<li><p>Wenn die Standard-Gültigkeitsregel verwenden, können die folgenden Eingaben nicht überprüfen, müssen sie unabhängig überprüft, wie beispielsweise die Validierung null (00%) werden; Neue-Zeile (% 0D,% 0a, \ r, \ n) Verifizieren; Verifikationspfad Alternativ Zeichen “Punkt - Punkt - slash” (oder ../ .. ), wenn erweiterte Unterstützung UTF-8-Zeichensatzcodierung, Validierung Ersatzzeichen:% c0% ae% c0% ae / (unter Verwendung von Standard for Dual-Codierung oder andere Arten von Codierung)</p>
+</li>
+<li><p>starke Authentisierungsdaten aus der Eingabeumleitung (ein Angreifer kann direkt an den bösartigen Code übermittelt werden, um das Ziel umgeleitet werden, wodurch die Anwendungslogik zu vermeiden und Validierung vor allen Umleitungen durchgeführt wird)</p>
+</li>
+<li><p>Überprüfen Sie den Datentyp</p>
+</li>
+<li><p>Authentifizierungsdatenbereich</p>
+</li>
+<li><p>Authentifizierungsdatenlänge</p>
+</li>
+</ul>
+<hr>
+<h2 id="Zweitens-ist-die-Ausgabe-des-Encoders"><a href="#Zweitens-ist-die-Ausgabe-des-Encoders" class="headerlink" title="Zweitens ist die Ausgabe des Encoders"></a>Zweitens ist die Ausgabe des Encoders</h2><ul>
+<li><p>ein Standardverfahren für jeden Ausgangscode verwendet wird, hat eine Regel getestet</p>
+</li>
+<li><p>codiert die von dem Server zurückgegebenen Daten an alle Client semantische Ausgangskodierung. Coding wie HTML, URL-Codierung erforderlich codierte Form je nach Szenario Auswahl bestimmte Anwendung</p>
+</li>
+<li><p>es sei denn, das Ziel Compiler sicher ist, kodieren sonst alle Zeichen</p>
+</li>
+<li><p>Ausgabe für SQL, XML und LDAP-Abfragen, semantische purify alle nicht vertrauenswürdige Daten</p>
+</li>
+<li><p>Für den Systembefehl arbeitet, reinigen alle Ausgaben nicht vertrauenswürdige Daten</p>
+</li>
+</ul>
+<hr>
+<h2 id="Ausnahmebehandlung"><a href="#Ausnahmebehandlung" class="headerlink" title="Ausnahmebehandlung"></a>Ausnahmebehandlung</h2><ul>
+<li><p>die Offenlegung von sensiblen Informationen in Ausnahme verbieten (der Bereich von sensiblen Daten sollte basierend auf dem Ergebnis von Szenarien und Bedrohungsanalyse eines typischen Produktes sensiblerer Daten einschließlich Passwörtern, Kontonummern, persönliche Informationen, Kommunikationsaufzeichnungen, Schlüssel bestimmt werden, etc.)</p>
+</li>
+<li><p>verbieten Offenlegung der Anwendungsserver Ausnahme von Fingerabdruckinformationen (wie zB Version, Pfad, Architektur)</p>
+</li>
+<li><p>das Objekt in einen Zustand, bevor das Verfahren wieder hergestellt werden, wenn eine Abnormalität auftritt (wenn ein Betriebsfehler, Operationen Rollback, oder zu vermeiden, um den Zustand des Objekts zu ändern, das Objekt Zustand Konsistenz aufrechtzuerhalten)</p>
+</li>
+<li><p>I / O-Operationen - temporäre Dateien nach Gebrauch gelöscht werden sollen</p>
+</li>
+<li><p>nicht eingekapselten Daten Buffer-Objekte mit nicht vertrauenswürdigem Code ausgesetzt</p>
+</li>
+<li><p>Geben Sie die entsprechenden Zugriffsberechtigungen, wenn eine Datei in einem Mehrbenutzersystem zu schaffen nicht autorisierten Zugriff auf Dateien zu verhindern,</p>
+</li>
+<li><p>Wenn ein externer Prozessstrom externer Ausgang oder Fehlerinformationen durch seinen Ausgang seines Ausgangsstrom schnell entleert werden muß, um die Ausgabestrom-Puffer aufgebraucht ist und führen zu externem Prozess zu verhindern, blockiert.</p>
+</li>
+<li><p>Weiße Liste Dateiberechtigungen auf die freigegebenen Verzeichnisoperationen zu steuern, wie Lese- / Schreib- / Ausführungsberechtigungen</p>
+</li>
+</ul>
+<hr>
+<h2 id="Drittens-ist-die-Betriebsumgebung"><a href="#Drittens-ist-die-Betriebsumgebung" class="headerlink" title="Drittens ist die Betriebsumgebung"></a>Drittens ist die Betriebsumgebung</h2><ul>
+<li><p>Verwenden Sie keine gefährliche Kombination Lizenz und Ziele (wie nicht AllPermission der Erlaubnis gegeben, nicht vertrauenswürdigen Code nicht ReflectPermission Lizenz Zielkombinationen und suppressAccessChecks verwenden, nicht java.lang.RuntimePermission Lizenz Ziel in Kombination mit create)</p>
+</li>
+<li><p>Setzen Sie die JVM-Bytecode-Verifikation nicht deaktivieren, wenn Bytecode-Klassendateien als bösartig manipuliert, wird es ein Sicherheitsrisiko sein</p>
+</li>
+<li><p>Plattform Überwachung wird empfohlen, nicht Internet zu öffnen, wird der Zugriff auf die Umwelt innerhalb des Netzwerks beschränkt, wenn es eine Remote-Ausführung Verwundbarkeit Monitoring-Plattform ist, ein Sicherheitsrisiko für die Anwendung überwacht darstellen wird wird</p>
+</li>
+<li><p>Es wird empfohlen, dass alle sicherheitsrelevanten Codes (zum Beispiel Zugangskontrolle oder ein Benutzername und ein Kennwort Bestätigungscode) in einem JAR-Paket platziert</p>
+</li>
+<li><p>Produktionscode enthält keine Code oder Debug-Schnittstellen</p>
+</li>
+</ul>
+<hr>
+<h2 id="Viertens-Authentifizierung"><a href="#Viertens-Authentifizierung" class="headerlink" title="Viertens Authentifizierung"></a>Viertens Authentifizierung</h2><ul>
+<li><p>Zusätzlich zu den spezifischen zu „öffnen“ Inhalt, alle Seiten und Ressourcen Authentifizierung benötigen, und Authentifizierungsfunktionen entwickelt, zu korrigieren</p>
+</li>
+<li><p>Alle von dem Authentifizierungsprozess muss auf dem Back-End-Server ausgeführt werden</p>
+</li>
+<li><p>Wo immer möglich, die Umstände, die Einrichtung und die Verwendung von Standard validiert Dienste (wie C4A) durch die Identität der Sicherheitstests</p>
+</li>
+<li><p>alle Authentifizierungs steuern sicher nicht erfolgreichen Authentisierung angeordnet sein sollte, wie beispielsweise einen Fehler fuzzy Aufforderung geben, sensible Informationen verbergen</p>
+</li>
+<li><p>Maßnahmen Gewalt Protokolleintrag zu verhindern, sollten die Bibliothek getroffen haben und erraten erraten (Batch-Login-Versuche das Passwort Wörterbuch mit durchgesickert sind) Lösung, überschreitet eine festgelegte Anzahl von fehlgeschlagenen Notwendigkeit Sperrcode oder Bilder Direktzugriffsbeschränkungen zu ermöglichen,</p>
+</li>
+<li><p>mit https-POST-Anfrage Übertragungen von Authentifizierungsanmeldeinformationen</p>
+</li>
+<li><p>Authentifizierung Fehlermeldung Fuzzy-Verarbeitung, wie die Verwendung von „Benutzername oder Kennwort Fehlern“ anstelle von „falschen Benutzername“ oder „Passwort“ eindeutig aufgefordert.</p>
+</li>
+<li><p>sensible Informationen oder externe Systemverbindung sollten funktionieren Authentifizierung konfiguriert werden, und eine gültige Authentifizierungssteuer</p>
+</li>
+<li><p>bei der Umsetzung der wichtigsten Operationen (wie die persönlichen Daten Passwort ändern Betrieb), reagiert wieder auf Benutzeridentitätsprüfung</p>
+</li>
+<li><p>die Verwendung von hochsensiblen oder wichtigen Handelskonto Multi-Faktor-Authentifizierungsmechanismen, wie Zahlungs Passwort, SMS Bestätigungscodes</p>
+</li>
+</ul>
+<hr>
+<h2 id="Funftens-SMS-Verifizierungscode"><a href="#Funftens-SMS-Verifizierungscode" class="headerlink" title="Fünftens SMS Verifizierungscode"></a>Fünftens SMS Verifizierungscode</h2><ul>
+<li><p>einmal mit einem</p>
+</li>
+<li><p>Senden Frequenzsteuerung (Empfehlungen 60s Erfassungszeit)</p>
+</li>
+<li><p>Bestätigungscode gültig ist (innerhalb der empfohlenen 60er Jahre lebendig, freundlich prompt SMS)</p>
+</li>
+<li><p>Komplexität (SMS Verifizierungscode Empfehlung 6-stellig)</p>
+</li>
+<li><p>Sicherheits-Tipps: ob es die individuellen eigenen operationellen Risiken und andere Tipps</p>
+</li>
+<li><p>(check out Client nur als Ergänzung zu leicht umgangen) muss die letzte Prüfung an der Front-End-Server-Code-Prüfung an den Eingangsdaten verwendet werden,</p>
+</li>
+<li><p>die Notwendigkeit, die Häufigkeit von kurzen Codes zu begrenzen, zum Beispiel: täglich nur erlaubt, eine Telefonnummer 5 zu übertragen, böswilligen Hacker verbraucht SMS zu verhindern</p>
+</li>
+<li><p>verschiedene Szenarien von SMS-Codes sind nicht Allgemein</p>
+</li>
+<li><p>eine einzelne Nachricht-Authentifizierungscodes begrenzen die effektive Anzahl</p>
+</li>
+<li><p>ein Bestätigungscode an die Telefonnummer entsprechen muss nicht gleich sein</p>
+</li>
+</ul>
+<hr>
+<h2 id="Sechstens-CAPTCHA"><a href="#Sechstens-CAPTCHA" class="headerlink" title="Sechstens CAPTCHA"></a>Sechstens CAPTCHA</h2><ul>
+<li><p>einmal mit einem</p>
+</li>
+<li><p>Gültigkeit Bestätigungscode (gültig innerhalb von 10 Minuten, können Sie anhand der Szene und Erfahrung kompatibel Sicherheit flexibel eingestellt)</p>
+</li>
+<li><p>Komplexität (vier oder mehr Zahlen, Buchstaben abwechselnd), können auch Werte notwendige Strom beliebte Authentifizierungscodes ziehen oder berechnet werden</p>
+</li>
+<li><p>Die serverseitige Authentifizierungs</p>
+</li>
+<li><p>von der Benutzerfreundlichkeit und sicherheitstechnischer Sicht kann automatisch gestaltet werden, um Pop-up, wenn die Eingabe-Authentifizierungscode Benutzereingaben Box nach drei falscher Prüfungsoperation Passwort</p>
+</li>
+</ul>
+<hr>
+<h2 id="7-Passwort-Management"><a href="#7-Passwort-Management" class="headerlink" title="7, Passwort-Management"></a>7, Passwort-Management</h2><ul>
+<li><p>die Verwendung von privatem oder schwachen Verschlüsselungsalgorithmus zu verbieten (wie das Verbot der Verwendung von DEM, SHA1, usw., ist es empfehlenswert, AES zu verwenden: 128 Wei, RSA: 2048 Wei, DSA: 2048 Bit)</p>
+</li>
+<li><p>Hashing-Algorithmen und auf Basis Wert Salz (Salz) sichere Speichermodus Kennwortinformationen</p>
+</li>
+<li><p>Passwort-Eingabefeld kann so ausgelegt werden, um zu zeigen, und Passwort Schalt verstecken</p>
+</li>
+<li><p>Passwort-Reset und ändern, müssen wir den rechtlichen Status von Sekundär überprüfen</p>
+</li>
+<li><p>Wenn das Passwort zurückgesetzt, Registrierung Telefonnummer und E-Mail-Antwort auf eine wirksame Überprüfung Link kann nur auf einen vorher registrierte E-Mail-Adresse oder Telefonnummer vorab gebündelt gesendet werden</p>
+</li>
+<li><p>vorläufiges Passwort und ein Link sollen für einen kurzen Zeitraum ausgelegt sein (beispielsweise 5 Minuten), Brute-Force zu verhindern</p>
+</li>
+<li><p>Wenn das Passwort zurückgesetzt, sollte ich SMS-Benachrichtigung, wenn der Benutzer in Betrieb ist, sagte ein Sicherheitsrisiko</p>
+</li>
+<li><p>Passwortkomplexität Einstellungen: Es wird empfohlen, mehr als acht Zeichen, einschließlich Buchstaben, Zahlen und Sonderzeichen usw.</p>
+</li>
+<li><p>Passwort-Szene Komplexität sollte die Kennwortüberprüfung</p>
+</li>
+<li><p>Passwort und können sich nicht anmelden auf der Konsole</p>
+</li>
+<li><p>Verbindungskonfigurationsdatenbank speichern das Kennwort des Benutzers in verschlüsselter Form</p>
+</li>
+<li><p>das vorgeschlagene Design-Modifikationen Passwort in regelmäßigen Abständen daran erinnert Mechanismus</p>
+</li>
+</ul>
+<h2 id="8-Sitzungssicherheit"><a href="#8-Sitzungssicherheit" class="headerlink" title="8, Sitzungssicherheit"></a>8, Sitzungssicherheit</h2><ul>
+<li><p>Bereinigen Sie die Sitzung und die zugehörigen Anmeldeinformationen unmittelbar nach dem Abmelden des Benutzers</p>
+</li>
+<li><p>Die Abmeldefunktion sollte die zugehörige Sitzung oder Verbindung vollständig beenden</p>
+</li>
+<li><p>Cookie Erhöhung der Sicherheit und fügt hinzu, „Httponly“ und „sicher“ Attribut (bei „sichere“ Eigenschaft auf true gesetzt ist, ein Cookie erstellen wird in einer sicheren Form an den Server übertragen werden, das heißt, nur HTTPS-Verbindungen sind Browser übermittelte Sitzung an den Server zur Authentifizierung wird die HTTP-Verbindung zu den Informationen nicht überträgt, ist es kein Problem gestohlen Plätzchen; set „Httponly“ -Attribut, durch ein Programm (JS-Skript, das Applet, etc.) kann nicht gelesen werden Cookie-Informationen, die auch das Risiko von XSS-Cross-Site-Scripting-Angriffen reduzieren.</p>
+</li>
+<li><p>Session-Cookies sollten für den Ablauf ausgelegt sein und sofort nach dem Timeout ablaufen</p>
+</li>
+<li><p>Wenn das Design es Benutzern ermöglicht, sich gleichzeitig an einem Mehrkanal-Terminal anzumelden, empfiehlt es sich, allgemeine Anmeldebeschränkungen für Geräte zu treffen.</p>
+</li>
+<li><p>Legen Sie die Domäne und den Pfad für das Cookie fest, das die authentifizierte Sitzungskennung enthält, und legen Sie einen entsprechenden Grenzwert für die Site fest. Die Standard-Cookie-Domäne ist der aktuelle Domänenname und der Standard-Cookie-Pfad ist der Verzeichnispfad der aktuellen Seite. Wenn Sie domänenübergreifend oder in anderen Pfaden auf Cookies zugreifen möchten, müssen Sie diese beiden Eigenschaften Domain und Pfad zurücksetzen.</p>
+</li>
+<li><p>Die Abmeldefunktion sollte für alle authentifizierten Seiten verfügbar sein</p>
+</li>
+<li><p>Legen Sie einen Sitzungszeitlimit fest, der so kurz wie möglich ist. Berücksichtigen Sie dabei die Risiko- und Geschäftsfunktionsanforderungen. Normalerweise sollte es ein paar Stunden nicht überschreiten.</p>
+</li>
+<li><p>Nicht Sitzungsidentifikatoren in der URL belichten, oder melden Sie sich die Fehlermeldung sollte die Sitzungskennung erscheinen nur in der http-Header-Informationen nicht auf die Sitzungskennung GET-Parameter übergeben</p>
+</li>
+<li><p>periodisch erzeugt eine neue Session-Kennung und nicht periodisch einen Sitzungsidentifizierer machen (session insbesondere solche, die die ursprüngliche Kennung lindern können, sind im Fall von hijacking) erhaltene</p>
+</li>
+<li><p>Wenn bei der Authentifizierung die Verbindung von HTTP zu HTTPS wechselt, wird eine neue Sitzungs-ID generiert. In der Anwendung bei Eingriffen, entführte die empfohlene Dauer Verwendung HTTPS, Sie nicht hin und her zwischen dem HTTPS und HTTP umgeschaltet werden sollen, wird die Sitzung Übergabeprozess wirksam zu verhindern.</p>
+</li>
+<li><p>Request Forgery Sicherheitsanfälligkeit als Standard von Operationen auf der Server-Seite eines sicheren Session-Managements durchgeführt, die Umsetzung von Recht Authentifizierung und Zugriffskontrolle für jede Sitzung, zu verhindern, dass Cross-Site-Präsenz von CSRF</p>
+</li>
+</ul>
+<hr>
+<h2 id="9-Zugangskontrolle"><a href="#9-Zugangskontrolle" class="headerlink" title="9, Zugangskontrolle"></a>9, Zugangskontrolle</h2><ul>
+<li><p>Separate privilegierte Logik von anderem Anwendungscode</p>
+</li>
+<li><p>Beschränken Sie den Zugriff auf Dateiressourcen nur auf autorisierte Benutzer</p>
+</li>
+<li><p>Beschränken Sie nur autorisierten Benutzern den Zugriff auf geschützte URLs</p>
+</li>
+<li><p>Beschränken Sie den Zugriff auf geschützte Funktionen oder Dienste nur auf autorisierte Benutzer</p>
+</li>
+<li><p>Es wird empfohlen, dass nur autorisierte Benutzer auf direkte Objektreferenzen zugreifen können</p>
+</li>
+<li><p>Beschränken Sie den Zugriff auf geschützte Anwendungsdaten nur auf autorisierte Benutzer</p>
+</li>
+<li><p>Beschränken Sie den Zugriff auf sicherheitsrelevante Konfigurationsinformationen nur auf autorisierte Benutzer</p>
+</li>
+<li><p>Beschränken Sie den Zugriff auf geschützte lokale Programme oder Ressourcen nur auf autorisierte externe Anwendungen oder Schnittstellen</p>
+</li>
+<li><p>Zugriffskontrollregeln, die auf der Serverseite erzwungen werden, und Zugriffskontrollregeln, die am Frontend implementiert sind, müssen übereinstimmen</p>
+</li>
+<li><p>Geben Sie beim Erstellen von Dateien auf dem Server die entsprechenden Zugriffsrechte (Lesen / Schreiben / Ausführen) an</p>
+</li>
+<li><p>Beim Zurücksetzen Berechtigungen geändert werden, sollte das Protokoll die gute und SMS-Benachrichtigung aufzeichnen, wenn der Benutzer selbst in Betrieb ist, sagte ein Sicherheitsrisiko bestehen kann</p>
+</li>
+</ul>
+<hr>
+<h2 id="10-Protokollspezifikation"><a href="#10-Protokollspezifikation" class="headerlink" title="10, Protokollspezifikation"></a>10, Protokollspezifikation</h2><ul>
+<li><p>Speichern Sie keine vertraulichen Informationen im Protokoll, einschließlich System-Fingerabdruckinformationen, Sitzungs-ID, Kontopasswort, ID, ID usw.</p>
+</li>
+<li><p>Stellen Sie sicher, dass der Protokollsatz wichtige Protokollereignisdaten enthält</p>
+</li>
+<li><p>Notieren Sie alle fehlgeschlagenen und erfolgreichen Eingabevalidierungen</p>
+</li>
+<li><p>Notieren Sie alle fehlgeschlagenen und erfolgreichen Authentifizierungsdatensätze</p>
+</li>
+<li><p>Notieren Sie alle fehlgeschlagenen und erfolgreichen Zugriffs- und Vorgangsdatensätze</p>
+</li>
+<li><p>Erfassen Sie offensichtliche Änderungsereignisse, einschließlich Änderungen an Statusdaten</p>
+</li>
+<li><p>Aufzeichnung eines Sitzungstokenversuchs mit einer ungültigen Verbindung oder abgelaufen</p>
+</li>
+<li><p>Zeichnen Sie alle Betriebsverhalten der Verwaltungsfunktionen auf, einschließlich, aber nicht beschränkt auf Änderungen der Sicherheitskonfigurationseinstellungen</p>
+</li>
+<li><p>Notieren Sie alle fehlgeschlagenen und erfolgreichen Back-End-Verbindungen</p>
+</li>
+<li><p>Notieren Sie die Fehlerinformationen des Verschlüsselungsmoduls</p>
+</li>
+<li><p>Es ist verboten, das Protokoll direkt im WEB-Verzeichnis zu speichern, auf das der Browser zugreifen kann.</p>
+</li>
+</ul>
+<hr>
+<h2 id="11-sensible-Informationen"><a href="#11-sensible-Informationen" class="headerlink" title="11, sensible Informationen"></a>11, sensible Informationen</h2><ul>
+<li><p>Temporäre Erzeugung sensibler Daten (in Speicher oder Dateien geschrieben) mit zeitnahen Entfernungs- und Freigabemechanismen</p>
+</li>
+<li><p>Geben Sie keine sensiblen Informationen in die HTTP-GET-Anforderungsparameter wie Benutzername, Passwort, Kartennummer, ID usw. ein.</p>
+</li>
+<li><p>Deaktivieren Sie das automatische Ausfüllen des Formulars, da das Formular möglicherweise vertrauliche Informationen enthält, einschließlich Authentifizierungsinformationen</p>
+</li>
+<li><p>Speichern Sie keine Passwörter oder andere vertrauliche Informationen in Klartext auf dem Client</p>
+</li>
+<li><p>SSL-verschlüsselte Übertragung für alle sensiblen Informationen</p>
+</li>
+<li><p>Codieren Sie keine sensiblen Informationen (einschließlich Verschlüsselungsschlüssel usw.) im Programm</p>
+</li>
+<li><p>Es ist verboten, vertrauliche Informationen wie Passwort, ID-Nummer, Bankkartennummer und Karteninhabername im Klartext zu speichern.</p>
+</li>
+<li><p>Speichern Sie keine vertraulichen Informationen im Protokoll, einschließlich, aber nicht beschränkt auf Systemdetails, Sitzungskennungen, Passwörter usw.</p>
+</li>
+<li><p>Es ist verboten, die Fingerabdruckinformationen des Anwendungsservers in der Ausnahme offenzulegen, wie z. B. Version, Pfad, Komponentenversion usw.</p>
+</li>
+<li><p>Es ist verboten Quellcode oder Sql auf Open Source Plattformen oder Communities hochzuladen, wie zB github, Open Source China, etc.</p>
+</li>
+<li><p>Anforderung enthält sensitive Parameter (wie Auftragsnummer, ID, etc.) sind verworren werden, verhindern, dass die Gefahr des Entstehens Verfahrinformation Parameter</p>
+</li>
+<li><p>Wenn vertrauliche Informationen auf einer Webseite angezeigt werden sollen, sollten sensible Felder im Hintergrund desensibilisiert werden.</p>
+</li>
+<li><p>Rücksendungsdaten sollten keine anderen Geschäftsdaten als Anfragen enthalten, insbesondere keine sensiblen Informationsdaten</p>
+</li>
+</ul>
+<hr>
+<h2 id="12-Passwortwiederherstellungssicherheit"><a href="#12-Passwortwiederherstellungssicherheit" class="headerlink" title="12, Passwortwiederherstellungssicherheit"></a>12, Passwortwiederherstellungssicherheit</h2><ul>
+<li><p>Server-Seite, um Authentifizierung zu tun, vermeiden Sie, Front-End-Kontrolle zu umgehen</p>
+</li>
+<li><p>Fügen Sie einen sekundären Authentifizierungsfaktor hinzu, z. B. einen Bestätigungscode</p>
+</li>
+<li><p>Einbeziehen von Authentifizierungs-Token für die Authentifizierung usw. geben den Verifizierungsinhalt nicht direkt an den Benutzer zurück.</p>
+</li>
+<li><p>Verschlüsselung der Authentifizierungsinformationen, starker Algorithmus empfohlen (AES wird empfohlen: 128 Bit, RSA: 2048 Bit, DSA: 2048 Bit)</p>
+</li>
+<li><p>Die Parameter im Authentifizierungszertifikat sollten verwechselt werden</p>
+</li>
+<li><p>Bei mehreren Verifizierungsvorgängen wird jeder Überprüfungsmechanismus sortiert, wenn ein Sicherheitsrisiko besteht, das den vorherigen Überprüfungsmechanismus überspringt und direkt zum letzten Schritt der Authentifizierung führt.</p>
+</li>
+<li><p>Überprüfung des Handy-Kurznachrichtencodes, es ist notwendig zu überprüfen, ob die Mobiltelefonnummer und die Kurzmitteilung übereinstimmen</p>
+</li>
+<li><p>Das Eingabefeld sollte die Rechtmäßigkeit der Eingabedaten überprüfen, um Cross-Site-Scripting-Angriffe durch XSS zu verhindern</p>
+</li>
+<li><p>Password Recovery Link begrenzt die effektive Zugriffszeit und die Anzahl der Wiederverwendungen (nicht wiederverwendbar)</p>
+</li>
+</ul>
+<hr>
+<h2 id="Dreizehn-SQL-Injektion"><a href="#Dreizehn-SQL-Injektion" class="headerlink" title="Dreizehn, SQL-Injektion"></a>Dreizehn, SQL-Injektion</h2><ul>
+<li><p>Traue niemals Benutzereingaben, überprüfe alle Benutzereingaben, schließe das Filtern und Entkommen von SQL-Anweisungen ein</p>
+</li>
+<li><p>Verwenden Sie niemals dynamisches Assembly-SQL, Sie können parametrisiertes SQL verwenden oder gespeicherte Prozeduren für den Datenabfragezugriff verwenden</p>
+</li>
+<li><p>Verwenden Sie niemals Administratorrechte für Datenbankverbindungen, verwenden Sie separate nicht privilegierte Berechtigungen für jede Anwendung und konfigurieren Sie eine begrenzte Anzahl von Datenbankverbindungen</p>
+</li>
+<li><p>Speichern Sie keine vertraulichen Informationen im Klartext, verwenden Sie sensible Methoden wie Verschlüsselung oder Hashing oder Verwirrung, um sensible Informationen zu desensibilisieren.</p>
+</li>
+<li><p>Ausnahmeinformationen Anwendungen mit sensiblen Daten sollten nicht minimal Hinweise gegeben werden, empfiehlt die Fehlermeldung in der Originalverpackung Fehler anpassen, kann die Ausnahmeinformationen in einer separaten Datenbank-Tabelle gespeichert werden</p>
+</li>
+<li><p>XML-Injektion - Zusammensetzen von XML mit String / StringBuffer / StringBuilder / StringFormat nicht</p>
+</li>
+<li><p>Es wird empfohlen, das Attribut oder den Inhalt des XML-Elements zu umgehen</p>
+</li>
+</ul>
+<hr>
+<h2 id="Vierzehn-XSS-Cross-Site-Scripting-Angriff"><a href="#Vierzehn-XSS-Cross-Site-Scripting-Angriff" class="headerlink" title="Vierzehn, XSS-Cross-Site-Scripting-Angriff"></a>Vierzehn, XSS-Cross-Site-Scripting-Angriff</h2><ul>
+<li><p>Eingabedaten filtern und entkommen, einschließlich, aber nicht beschränkt auf &lt;&gt; “% () &amp; + \ \” und andere gefährliche Sonderzeichen</p>
+</li>
+<li><p>HTML-Entweichen von Daten, wenn Daten zu HTML-Elementattributen oder Inhalt hinzugefügt werden</p>
+</li>
+<li><p>Script-Escaping-Daten, wenn es zu einem Skript hinzugefügt wird</p>
+</li>
+<li><p>CSS-Escape von Daten, wenn Daten zum Stil hinzugefügt werden</p>
+</li>
+</ul>
+<hr>
+<h1 id="15-CSRF-Cross-Site-Anfrage-Falschung"><a href="#15-CSRF-Cross-Site-Anfrage-Falschung" class="headerlink" title="15, CSRF Cross-Site-Anfrage Fälschung"></a>15, CSRF Cross-Site-Anfrage Fälschung</h1><ul>
+<li><p>Es wird empfohlen, die CSRF-Token-Verifizierung in jedem Schlüsselformular einzuführen (zufällige Zeichenfolge, die in der Sitzung generiert wurde, Prüfung nach der Einreichung)</p>
+</li>
+<li><p>Benutzer müssen beim Senden von Schlüsselformularen eine sekundäre Authentifizierung durchführen (Passwort eingeben, KEY-Taste drücken, Bildverifizierungscode eingeben, SMS-Bestätigungscode)</p>
+</li>
+<li><p>Überprüfen Sie den Request Referer (z. B. domänenübergreifende, systeminterne Anwendung)</p>
+</li>
+</ul>
+<hr>
+<h2 id="16-Datei-Upload-Sicherheit"><a href="#16-Datei-Upload-Sicherheit" class="headerlink" title="16, Datei-Upload-Sicherheit"></a>16, Datei-Upload-Sicherheit</h2><ul>
+<li><p>Der Upload-Vorgang sollte einen Authentifizierungsmechanismus entwickeln und eine rechtliche Identitätsprüfung durchführen</p>
+</li>
+<li><p>Laden Sie nur relevante Dokumenttypen hoch, die den geschäftlichen Anforderungen entsprechen</p>
+</li>
+<li><p>indem Sie die Datei-Header-Informationen, wie zum Beispiel JPEG (jpg) Datei-Header-Informationen (hexadezimal) Prüfung: FFD8FF, stellen Sie sicher, dass ein Dokumenttyp erwartet wird</p>
+</li>
+<li><p>Verwenden Sie keine Dateien auf die gleiche Web-Anwendungsumgebung speichern, wird empfohlen, die Datei in einem eigenen Dateiserver in einer separaten Domain-Name-Server-Konfigurationsdatei speichern besser zugreifen</p>
+</li>
+<li><p>Beschränken Sie das Hochladen von Dateien, die vom Webserver analysiert werden können, wie zB jsp, php usw.</p>
+</li>
+<li><p>Upload-Dateien werden in binärer Form heruntergeladen Es wird empfohlen, keinen direkten Zugriff zu gewähren (um zu verhindern, dass Trojaner-Dateien direkt ausgeführt werden)</p>
+</li>
+<li><p>Erteilen Sie dem freigegebenen Dateispeicherverzeichnis keine ausführbaren Berechtigungen</p>
+</li>
+<li><p>Deaktivieren Sie clientseitige Upload- / Download-Pfade für benutzerdefinierte Dateien (z. B. zum Springen verwenden Sie ../../../../).</p>
+</li>
+<li><p>Nach Datei-Upload umbenennen (müssen Namensregeln entsprechend den tatsächlichen Geschäftsanforderungen entwickeln)</p>
+</li>
+</ul>
+<hr>
+<h1 id="17-Komponentensicherheit"><a href="#17-Komponentensicherheit" class="headerlink" title="17, Komponentensicherheit"></a>17, Komponentensicherheit</h1><ul>
+<li><p>Bei Verwendung von Zufallszahlenfunktionen (z. B. java.security.SecureRandom-Klasse) werden starke Zufallszahlenfunktionen empfohlen</p>
+</li>
+<li><p>Minimieren Sie nicht benötigte Funktionen und Methoden in Komponenten, um unbekannte Sicherheitsrisiken zu vermeiden</p>
+</li>
+<li><p>Setzen Sie die im System verwendeten Sperrobjekte nicht dem nicht vertrauenswürdigen Code aus</p>
+</li>
+<li><p>Es wird empfohlen, SSL anstelle von Socket für sichere Dateninteraktion zu verwenden</p>
+</li>
+<li><p>Lokale Methodenaufrufe einkapseln (alle lokalen Methoden sollten als privat definiert sein und dann nur über eine Wrapper-Methode aufgerufen werden)</p>
+</li>
+<li><p>Verwenden Sie einen Sicherheitsmanager wie java.security oder Sicherheitskomponenten von Drittanbietern, um sensible Vorgänge zu schützen</p>
+</li>
+<li><p>Wenn Sie benutzerdefinierte Class Loader schreiben müssen abdecken GetPermissions () Funktion, vor allen Vertriebsrechte am Quellcode wird, sollte die übergeordnete Klasse super.getPermissions () aufrufen, Funktion, zusätzlich eine benutzerdefinierte Richtlinie, systemweite Standardsicherheitsrichtlinie auch umzusetzen ist Anwendung.</p>
+</li>
+<li><p>Vermeiden Sie verlassen sich voll und ganz auf die Standard automatische Signatur und Authentifizierungsmechanismen URLClassLoader java.util.jar vorgesehen ist, sollte eine Zertifikatskette Code Quelle (-Code-Source) erhalten Klassen zu laden, dann überprüfen Sie, ob das Zertifikat auf den lokalen Schlüsselspeicher gehört (der Schlüsselspeicher) in vertrauenswürdiger Unterzeichner</p>
+</li>
+</ul>
+<hr>
+<h1 id="18-Schnittstellen-Sicherheit"><a href="#18-Schnittstellen-Sicherheit" class="headerlink" title="18, Schnittstellen-Sicherheit"></a>18, Schnittstellen-Sicherheit</h1><ul>
+<li><p>IP-Steuerung der Anruferquelle, z. B. Firewall, Host-Verweigerung, Nginx-Verweigerung usw.</p>
+</li>
+<li><p>Authentifizierung der Identität des Anrufers, z. B. Schlüssel, Geheimnis, Zertifikat usw.</p>
+</li>
+<li><p>Aufruf der Parameterauthentifizierung, Entwurf eines Parameterfehlertoleranzmechanismus, um das Durchlaufen von Parametern für sensible Datensicherheitsprobleme zu vermeiden</p>
+</li>
+<li><p>Verwenden Sie die digitale Signatur, um sicherzustellen, dass die Identität der Schnittstelle vertrauenswürdig ist und die Daten manipulationssicher sind</p>
+</li>
+<li><p>Einstellungen für die Steuerung der Anruferberechtigung</p>
+</li>
+<li><p>Häufigkeit und Gültigkeitszeitraum für die Kontrolle aufrufen</p>
+</li>
+<li><p>Call-Verhalten Echtzeit-Erkennung, Sperren von Ausnahmen</p>
+</li>
+<li><p>Idempotenzprüfung, um die Datenkonsistenz zu erhalten</p>
+</li>
+<li><p>Application Access Security Gateway für APPID / KEY Identitätsauthentifizierung, verschlüsselte Übertragung und Digest-Signatur-Sicherheit</p>
+</li>
+</ul>
+<hr>
+<h1 id="19-ruft-Dubbo-Sicherheit"><a href="#19-ruft-Dubbo-Sicherheit" class="headerlink" title="19, ruft Dubbo Sicherheit"></a>19, ruft Dubbo Sicherheit</h1><ul>
+<li><p>die Verwendung von Token-Verifizierungszugangskontrolle, für die Verbraucher verhindern, dass unter Umgehung Zugriff auf die Registry-Provider, in der Registry Kontrollbehörde zu entscheiden, ob das Token an die Verbraucher abgegeben werden</p>
+</li>
+<li><p>Adopt Filter IP-Whitelist-Zugangskontrolle, und auch Dubbo unordentlichen Anruf zwischen Produktionssystem und Testsystem zu verhindern</p>
+</li>
+<li><p>Überprüfen Sie bei Bedarf (z. B. bei vertraulichen Informationen) den Benutzernamen und das Passwort, wenn Sie eine Verbindung zum Registrierungscenter Dubbo herstellen</p>
+</li>
+</ul>
+<hr>
+<h2 id="20-Redis-ruft-Sicherheit-auf"><a href="#20-Redis-ruft-Sicherheit-auf" class="headerlink" title="20, Redis ruft Sicherheit auf"></a>20, Redis ruft Sicherheit auf</h2><ul>
+<li><p>Die Überprüfung der Client-IP-Zugriffssteuerung sollte aktiviert sein</p>
+</li>
+<li><p>Die Client-Authentifizierung sollte aktiviert sein</p>
+</li>
+<li><p>Sensible Informationen sollten nicht in Klartext in Redis gespeichert werden</p>
+</li>
+</ul>
+<hr>
+<hr>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2017/11/06/Sicherheitsschulung/">Sicherheitsschulung</a><a class="next" href="/2017/06/19/Über 20 Jahre Java-Sandbox-Flucht/">Über 20 Jahre Java-Sandbox-Flucht</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/09/Android-Sicherheits-Checkliste/">Android-Sicherheits-Checkliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/2018BlackHat Werkzeug/">2018BlackHat Werkzeug</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/2018 Sicherheitsbewusstsein TOP-10/">2018 Sicherheitsbewusstsein TOP-10</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/API-Sicherheitsentwicklungscheckliste/">API-Sicherheitsentwicklungscheckliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/10/APP Sicherheitstest/">APP Sicherheitstest</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/12/IOS Sicherheitscheckliste/">IOS Sicherheitscheckliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Sicherheitsschulung/">Sicherheitsschulung</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/Sicherheitsdesign Checkliste/">Sicherheitsdesign Checkliste</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/Über 20 Jahre Java-Sandbox-Flucht/">Über 20 Jahre Java-Sandbox-Flucht</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/28/Trading System Häufig gestellte Fragen und Lösungen Übersicht/">Trading System Häufig gestellte Fragen und Lösungen Übersicht</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">hellozz.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
