@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <!--Setting-->
+	<meta name="google-site-verification" content="GxTXPq7QGi92h1GCv70OC9XLW_EjmiHJT13W0lKn1t8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="some thing fun">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://hellozz11.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>API-Sicherheitsentwicklungscheckliste | some thing fun</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="some thing fun" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+
+
+    
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2020224399094607",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://hellozz11.github.io">some thing fun</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>Archives</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- taggg -->
+					<ins class="adsbygoogle"
+						style="display:block"
+						data-ad-client="ca-pub-2020224399094607"
+						data-ad-slot="5456418301"
+						data-ad-format="auto"
+						data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="API-Sicherheitsentwicklungscheckliste">
+            
+	            API-Sicherheitsentwicklungscheckliste
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/06/19</span>
+        </span>
+        
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="I-Identitatsauthentifizierung"><a href="#I-Identitatsauthentifizierung" class="headerlink" title="I. Identitätsauthentifizierung"></a>I. Identitätsauthentifizierung</h2><ul>
+<li><p>[ ] Verwenden Sie <code>Basic Auth</code> nicht, um Standardauthentifizierungsprotokolle (wie JWT, OAuth) zu verwenden.</p>
+</li>
+<li><p>[ ] Machen Sie nicht “Authentifizierung”, “Token generieren”, “Passwort speichern” diese Räder, verwenden Sie Standard.</p>
+</li>
+<li><p>[ ] Benutze <code>Max Retry</code> und blockiere automatisch bei der Anmeldung.</p>
+</li>
+<li><p>[ ] Verschlüsseln Sie alle sensiblen Daten.</p>
+</li>
+</ul>
+<h3 id="1-1-JWT-JSON-Web-Token"><a href="#1-1-JWT-JSON-Web-Token" class="headerlink" title="1.1 JWT (JSON Web Token)"></a>1.1 JWT (JSON Web Token)</h3><ul>
+<li><p>[ ] Verwenden Sie einen zufälligen und komplexen Schlüssel (<code>JWT Secret</code>), um die Schwierigkeit der Brute-Force zu erhöhen.</p>
+</li>
+<li><p>[ ] Daten nicht direkt im Anfragetext extrahieren und die Daten verschlüsseln (<code>HS256</code> oder<code>RS256</code>).</p>
+</li>
+<li><p>[ ] Machen Sie die Ablaufzeit des Tokens so kurz wie möglich (<code>TTL</code>,<code>RTTL</code>).</p>
+</li>
+<li><p>[ ] Speichern Sie keine sensiblen Daten im JWT-Anfragetext, sondern [breakable] (<a href="https://jwt.io/#debugger-io)" target="_blank" rel="noopener">https://jwt.io/#debugger-io)</a>.</p>
+</li>
+</ul>
+<h3 id="1-2-OAuth-Autorisierungs-oder-Authentifizierungsvereinbarung"><a href="#1-2-OAuth-Autorisierungs-oder-Authentifizierungsvereinbarung" class="headerlink" title="1.2 OAuth-Autorisierungs- oder Authentifizierungsvereinbarung"></a>1.2 OAuth-Autorisierungs- oder Authentifizierungsvereinbarung</h3><ul>
+<li><p>[ ] Überprüfen Sie immer <code>redirect_uri</code> im Hintergrund, nur URLs auf der weißen Liste sind erlaubt.</p>
+</li>
+<li><p>[ ] Fügen Sie nicht jedes Mal, wenn das Token ausgetauscht wird, ein Token hinzu (nicht erlaubt: “response_type = token”).</p>
+</li>
+<li><p>[ ] Verwenden Sie den <code>state</code> -Parameter und füllen Sie einen zufälligen Hash, um Cross-Site-Request-Forgery (CSRF) zu verhindern.</p>
+</li>
+<li><p>[ ] Definieren Sie Standardbereiche und ihre jeweiligen gültigen Bereichsparameter für verschiedene Anwendungen.</p>
+</li>
+</ul>
+<h2 id="☆-Besuch"><a href="#☆-Besuch" class="headerlink" title="☆, Besuch"></a>☆, Besuch</h2><ul>
+<li><p>[ ] Beschränken Sie den Datenverkehr, um DDoS-Angriffe und Brute-Force-Angriffe zu verhindern.</p>
+</li>
+<li><p>[ ] Verwenden Sie das HTTPS-Protokoll auf dem Server, um MITM-Angriffe zu verhindern.</p>
+</li>
+<li><p>[ ] Verwenden Sie das <code>HSTS</code>-Protokoll, um SSLStrip-Angriffe zu verhindern.</p>
+</li>
+</ul>
+<h2 id="III-Eingabe"><a href="#III-Eingabe" class="headerlink" title="III, Eingabe"></a>III, Eingabe</h2><ul>
+<li><p>[ ] mit dem Betrieb der Betriebsfunktion HTTP konsistent verwendet, die GET ‚(Lesen)<code>,</code>die POST (create)<code>,</code>die PUT (ersetzen / update) und<code></code>die DELETE (Löschen von Datensätzen)<code>Wenn das Verfahren nicht anwendbar ist Gibt die</code>405 Method Not Allowed` für die angeforderte Ressource zurück.</p>
+</li>
+<li><p>[ ] <code>Content-Feld in dem Baumuster zur Request-Header verwendet wird, nur das Content Format, um zu überprüfen (z as</code> application / xml<code>,</code> application / json<code>etc.) und zurückgegeben, wenn die Bedingung nicht 406 satisfied</code> ist nicht Akzeptabel.</p>
+</li>
+<li><p>[ ] Datenvalidierung <code>Content-Baumuster zur veröffentlichen und wie Sie erhalten (wie as</code> application / x-www-form-urlencoded<code>,</code> multipart / form-data<code>,</code>application / json` etc.).</p>
+</li>
+<li><p>[ ] Verifiziere Benutzereingaben, um einige häufige Schwachstellen zu vermeiden (zB <code>XSS</code>,<code>SQL-inject</code>, <code>ferne Codeausführung</code>, etc.).</p>
+</li>
+<li><p>[ ] Sie keine sensiblen Daten ( <code>credentials</code>,<code>Passwords</code>, <code>Sicherheit tokens</code>, or<code>API keys</code>) in der URL, aber die Verwendung von Standard-Authentifizierungs-Request-Header.</p>
+</li>
+<li><p>[ ], um einen API-Gateway-Dienst zu ermöglichen, Caching, Zugriffsrate zu begrenzen (wie <code>Quota</code>,<code>Spike Arrest</code>, <code>Concurrent Rate Limit</code>) und dynamisch APIs Ressourcen bereitstellen.</p>
+</li>
+</ul>
+<h2 id="IV-Verarbeitung"><a href="#IV-Verarbeitung" class="headerlink" title="IV, Verarbeitung"></a>IV, Verarbeitung</h2><ul>
+<li><p>[ ] Überprüfen Sie, ob alle Terminals authentifiziert sind, um ein beschädigtes Authentifizierungssystem zu vermeiden.</p>
+</li>
+<li><p>[ ] Vermeiden Sie die Verwendung eindeutiger Ressourcen-IDs. Verwenden Sie <code>/ me / orders</code> anstelle von<code>/ user / 654321 / orders</code></p>
+</li>
+<li><p>[ ] Verwenden Sie <code>UUID</code> anstelle von Self-Growth ID.</p>
+</li>
+<li><p>[ ] Wenn Sie die XML-Datei syntaktisch analysieren müssen, stellen Sie sicher, dass die Analyse von Entitäten deaktiviert ist, um XXE-Angriffe zu vermeiden.</p>
+</li>
+<li><p>[ ] Wenn Sie die XML-Datei analysieren müssen, um sicherzustellen, dass die Unternehmen Expansion (entity Expansion), um geschlossen ist <code>Entitätsexpansion Einheit Expansion Angriffe durch Index / XML bomb</code> erreicht zu vermeiden.</p>
+</li>
+<li><p>[ ] Verwenden Sie CDN beim Hochladen von Dateien.</p>
+</li>
+<li><p>[ ] Wenn Sie eine große Datenmenge verarbeiten müssen, verwenden Sie Workers und Queues, um schnell zu reagieren und so HTTP-Blockierungen zu vermeiden.</p>
+</li>
+<li><p>[ ] Vergiss nicht, den DEBUG-Modus auszuschalten.</p>
+</li>
+</ul>
+<h2 id="五-Ausgabe"><a href="#五-Ausgabe" class="headerlink" title="五, Ausgabe"></a>五, Ausgabe</h2><ul>
+<li><p>[ ] Sende <code>X-Content-Type-Optionen: nosniff</code>-Header.</p>
+</li>
+<li><p>[ ] Sende <code>X-Frame-Optionen: SAMEORIGIN (oder leugnet)</code> header.</p>
+</li>
+<li><p>[ ] Sende `Content-Security-Policy: default-src ‘none’’-Header.</p>
+</li>
+<li><p>[ ] Lösche Fingerabdruck-Header - <code>X-Powered-By</code>,<code>Server</code>, <code>X-AspNet-Version</code>, etc.</p>
+</li>
+<li><p>[ ] Erzwingt <code>content-type</code> als Antwort, wenn Ihr Typ<code>application / json</code> ist, dann ist Ihr <code>content-type`</code> application / json`.</p>
+</li>
+<li><p>[ ] Geben Sie keine vertraulichen Daten wie “Anmeldeinformationen”, “Kennwörter”, “Sicherheitstoken” zurück.</p>
+</li>
+<li><p>[ ] Gibt am Ende des Vorgangs den entsprechenden Statuscode zurück (z. B. “200 OK”, “400 ungültige Anforderung”, “401 nicht autorisiert”, “405 Methode nicht zulässig” usw.).</p>
+</li>
+</ul>
+<h2 id="VI-Kontinuierliche-Integration-und-kontinuierliche-Bereitstellung"><a href="#VI-Kontinuierliche-Integration-und-kontinuierliche-Bereitstellung" class="headerlink" title="VI. Kontinuierliche Integration und kontinuierliche Bereitstellung"></a>VI. Kontinuierliche Integration und kontinuierliche Bereitstellung</h2><ul>
+<li><p>[ ] Verwenden Sie Komponententests und Integrationstests, um Ihr Design und Ihre Implementierung zu überprüfen.</p>
+</li>
+<li><p>[ ] Führen Sie den Code Review-Prozess ein, genehmigen Sie Änderungen nicht selbst.</p>
+</li>
+<li><p>[ ] Stellen Sie sicher, dass alle Komponenten des Dienstes statisch mit Antivirensoftware, einschließlich Bibliotheken von Drittanbietern und anderen Abhängigkeiten, gescannt werden, bevor sie in die Produktionsumgebung übertragen werden.</p>
+</li>
+<li><p>[ ] Entwerfen Sie eine Rollback-Lösung für die Bereitstellung.</p>
+</li>
+</ul>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                Reprint statement：For commercial reprint, please contact the author for authorization. For non-commercial reprint, please indicate the source. © <a href="https://fun.diyz.bid/" target="_blank">hellozz</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/posts/513d05e6/" class="pre-post btn btn-default" title='2018 Sicherheitsbewusstsein TOP-10'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">2018 Sicherheitsbewusstsein TOP-10</span>
+        </a>
+    
+    
+        <a href="/posts/ccb7c385/" class="next-post btn btn-default" title='APP Sicherheitstest'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">APP Sicherheitstest</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+    
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: '9PIhgUATHbAKruqK6VqLc78X-gzGzoHsz',
+            appKey: '3yJCdKwimcEg4SEY3GquAhFw',
+            placeholder: 'say something',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'en'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    
+        
+			<div class="widget">
+				<h3 class="title">Table of Contents</h3>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-Identitatsauthentifizierung"><span class="toc-text">I. Identitätsauthentifizierung</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-JWT-JSON-Web-Token"><span class="toc-text">1.1 JWT (JSON Web Token)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-OAuth-Autorisierungs-oder-Authentifizierungsvereinbarung"><span class="toc-text">1.2 OAuth-Autorisierungs- oder Authentifizierungsvereinbarung</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#☆-Besuch"><span class="toc-text">☆, Besuch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#III-Eingabe"><span class="toc-text">III, Eingabe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IV-Verarbeitung"><span class="toc-text">IV, Verarbeitung</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五-Ausgabe"><span class="toc-text">五, Ausgabe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VI-Kontinuierliche-Integration-und-kontinuierliche-Bereitstellung"><span class="toc-text">VI. Kontinuierliche Integration und kontinuierliche Bereitstellung</span></a></li></ol>
+				<div class="widget_stick">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- taggg -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2020224399094607"
+     data-ad-slot="5456418301"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<style>
+.widget_stick {
+    margin-bottom: 10px;
+}
+
+.widget_stick .stick {
+    display: block;
+    padding: 0 15px 15px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.widget_stick .stick h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 14px;
+    color: #FF787E;
+}
+
+.widget_stick .stick p {
+    color: #5f6367;
+    margin-bottom: 0;
+}
+
+.widget_stick .stick p a{
+    display: block;
+    font-size: 13px;
+    color:#00c1de
+}
+
+.widget_stick .stick strong {
+    margin: -1px 0 0 0;
+    display: inline-block;
+    padding: 4px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #FF787E;
+}
+
+.widget_stick .stick a img {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+</style>
+
+
+
+			</div>
+        
+ 
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
